@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ink: #0B1220;
+    --paper: #F6F3EA;
+    --surface: #FFFFFF;
+    --line: #E3DECF;
+    --assembly-blue: #2A4DFF;
+    --assembly-blue-deep: #15257A;
+    --canopy-green: #0E6B55;
+    --signal-lime: #D7FF3D;
+    --clay: #E2592C;
+    --ink-60: rgba(11,18,32,0.6);
+
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Geist Sans', 'Geist', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+
+    --ease-default: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-snappy: cubic-bezier(0.87, 0, 0.13, 1);
+
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+  }
+
+  [data-theme="dark"] {
+    --ink: #F6F3EA;
+    --paper: #0B1220;
+    --surface: #141C2B;
+    --line: #2A3245;
+    --assembly-blue: #6E8BFF;
+    --assembly-blue-deep: #4A6FFF;
+    --canopy-green: #1A9B7D;
+    --signal-lime: #D7FF3D;
+    --clay: #E2592C;
+    --ink-60: rgba(246,243,234,0.6);
+
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 300ms, color 300ms;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--assembly-blue);
+    color: var(--paper);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-mono-data {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .text-display {
+    font-size: clamp(2.75rem, 6vw, 6rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .text-h1 {
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .text-h2 {
+    font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .text-h3 {
+    font-size: clamp(1.25rem, 1.6vw, 1.75rem);
+    line-height: 1.2;
+  }
+
+  .text-body-lg {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+
+  .text-mono-label {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .text-mono-sm {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .card-base {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: box-shadow 400ms var(--ease-default);
+  }
+
+  .card-base:hover {
+    box-shadow: 0 8px 32px rgba(11, 18, 32, 0.08);
+  }
+
+  [data-theme="dark"] .card-base:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-pill {
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 200ms var(--ease-default);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-pill:focus-visible {
+    outline: 2px solid var(--assembly-blue);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    padding: 8px 16px;
+    background: var(--assembly-blue);
+    color: var(--paper);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    z-index: 9999;
+    transition: top 200ms;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+}
+
+@layer utilities {
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--line) 25%,
+      rgba(255, 255, 255, 0.4) 50%,
+      var(--line) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
