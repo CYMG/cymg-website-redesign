@@ -1,174 +1,353 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, BookOpen, ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import NewsletterCTA from '@/components/ui/NewsletterCTA';
+import { timelineEvents } from '@/data/timeline';
+import { MANDATE_REFS } from '@/lib/cymg-data';
 
-const mandates = [
-  { code: 'A/RES/68/288', context: 'Established the post-2015 development agenda process, reinforcing youth participation in environmental decision-making' },
-  { code: 'A/RES/67/290', context: 'Created the High-Level Political Forum on Sustainable Development, mandating stakeholder engagement including Major Groups' },
-  { code: 'A/69/L.43', context: 'Transforming our world: the 2030 Agenda for Sustainable Development — embedding youth as critical agents of change' },
-  { code: 'A/RES/70/1', context: 'Adopted the 2030 Agenda, recognizing children and youth as essential partners in sustainable development implementation' },
-];
-
-const avenues = [
-  { title: 'United Nations Environment Assembly (UNEA)', description: 'Engaging in its subsidiary organs, regional preparatory processes, and the implementation of UNEA resolutions.' },
-  { title: 'Multilateral Environmental Agreements (MEAs)', description: 'Administered by UNEP, such as CITES, CMS, and the Vienna Convention and Montreal Protocol.' },
-  { title: 'Science-Policy Interfaces', description: 'Contributing to processes like IPCC, IPBES, IRP, GEO, the Adaptation Gap Report, the Global Emissions Gap Report, the Global Chemicals Outlook, and the Global Waste Management Outlook.' },
-];
+const PULL_QUOTE =
+  'ensuring that young people’s voices, expertise, and demands are heard in the halls of environmental decision-making';
 
 export default function About() {
   const [openMandate, setOpenMandate] = useState<number | null>(null);
 
   return (
-    <div style={{ backgroundColor: 'var(--paper)' }}>
-      {/* Hero */}
-      <div
-        className="pt-24 pb-16 px-6"
-        style={{ backgroundColor: 'var(--assembly-blue)' }}
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--paper)' }}>
+      {/* ── Hero ─────────────────────────────────────────────── */}
+      <section
+        className="relative pt-32 pb-20 md:pb-28 overflow-hidden"
+        style={{ backgroundColor: '#0A1128' }}
       >
-        <div className="max-w-[1320px] mx-auto">
+        <div
+          className="absolute top-0 left-0 w-1.5 h-full"
+          style={{ backgroundColor: 'var(--signal-lime)' }}
+          aria-hidden="true"
+        />
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: 'About CYMG' }]} />
-          <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
-            About CYMG
-          </h1>
-        </div>
-      </div>
-
-      <div className="max-w-[1320px] mx-auto px-6 py-16 md:py-24">
-        {/* Mission */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          <div>
-            <span className="text-mono-label block mb-4" style={{ color: 'var(--ink-60)' }}>
-              MISSION
-            </span>
-            <p className="text-body-lg leading-relaxed mb-6" style={{ color: 'var(--ink)' }}>
-              The Children and Youth Major Group (CYMG) is a globally recognized umbrella mechanism
-              representing youth networks, organizations and individuals committed to addressing the
-              triple planetary crisis of climate change, biodiversity loss and pollution.
-            </p>
-            <p className="text-body-lg leading-relaxed" style={{ color: 'var(--ink)' }}>
-              As the formal youth engagement mechanism to the United Nations Environment Programme
-              (UNEP), CYMG plays a vital role in advocating for the inclusion, empowerment, and
-              meaningful participation of young people in global environmental governance.
-            </p>
-          </div>
-          <div
-            className="rounded-[20px] p-8 md:p-12 flex items-center"
-            style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <blockquote>
-              <span className="font-display text-6xl leading-none" style={{ color: 'var(--assembly-blue)' }}>
-                &ldquo;
-              </span>
-              <p
-                className="font-display text-h2 italic -mt-4"
-                style={{ color: 'var(--assembly-blue)' }}
+            <p
+              className="font-mono text-xs uppercase tracking-[0.15em] mb-3"
+              style={{ color: 'var(--signal-lime)' }}
+            >
+              About
+            </p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.1]">
+              About <span style={{ color: 'var(--assembly-blue)' }}>CYMG</span>
+            </h1>
+            <p className="mt-5 text-lg md:text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
+              The official UN-recognized constituency for children and youth engaging with UNEP,
+              UNEA, and UNEP-administered Multilateral Environmental Agreements.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        {/* ── Editorial: What is CYMG ─────────────────────────── */}
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-28">
+          <div className="hidden lg:flex lg:col-span-1 justify-center">
+            <span
+              className="font-mono text-xs uppercase tracking-[0.2em] origin-center -rotate-90 whitespace-nowrap mt-4"
+              style={{ color: 'var(--ink-60)' }}
+              aria-hidden="true"
+            >
+              What is CYMG
+            </span>
+          </div>
+
+          <div className="lg:col-span-7">
+            <div className="lg:hidden mb-6">
+              <span
+                className="font-mono text-xs uppercase tracking-[0.2em]"
+                style={{ color: 'var(--ink-60)' }}
               >
-                Established through Agenda 21 of the Rio Conference in 1992, CYMG has been at the
-                forefront of this advocacy within UNEP&rsquo;s processes and the broader UN system.
+                What is CYMG
+              </span>
+            </div>
+            <p
+              className="text-lg md:text-xl leading-[1.7]"
+              style={{ color: 'var(--ink)' }}
+            >
+              <span
+                className="font-serif float-left mr-3 -mt-2 leading-none"
+                style={{
+                  fontSize: '3.5rem',
+                  color: 'var(--assembly-blue)',
+                }}
+                aria-hidden="true"
+              >
+                T
+              </span>
+              he Children and Youth Major Group to UNEP (CYMG) is the official
+              UN-recognized constituency for children and youth engaging with the
+              United Nations Environment Programme (UNEP), the United Nations
+              Environment Assembly (UNEA), and UNEP-administered Multilateral
+              Environmental Agreements (MEAs).
+            </p>
+            <p
+              className="mt-6 text-base md:text-lg leading-[1.7]"
+              style={{ color: 'var(--ink)' }}
+            >
+              Formed in 2012, CYMG is run almost entirely by youth volunteers across
+              six world regions. It coordinates 13 thematic working groups spanning
+              pollution and chemicals, nature and ecosystems, and policy, governance,
+              and finance — {PULL_QUOTE}.
+            </p>
+
+            <blockquote
+              className="mt-8 pl-6 py-2 border-l-4"
+              style={{ borderColor: 'var(--assembly-blue)' }}
+            >
+              <p
+                className="font-serif text-lg md:text-xl leading-[1.65]"
+                style={{ color: 'var(--ink)' }}
+              >
+                {PULL_QUOTE}
               </p>
             </blockquote>
-          </div>
-        </div>
 
-        {/* Four Avenues */}
-        <div className="mb-20">
-          <span className="text-mono-label block mb-4" style={{ color: 'var(--ink-60)' }}>
-            PRIMARY ENGAGEMENT AVENUES
-          </span>
-          <h2 className="text-h2 font-display mb-8" style={{ color: 'var(--ink)' }}>
-            How We Work
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {avenues.map((a) => (
+            <p
+              className="mt-8 text-base md:text-lg leading-[1.7]"
+              style={{ color: 'var(--ink)' }}
+            >
+              From the negotiation of international plastics treaties to the protection
+              of the ozone layer, from biodiversity frameworks to sustainable finance,
+              CYMG connects the passion and knowledge of the world’s youth with the
+              procedural mechanisms of global environmental governance.
+            </p>
+          </div>
+
+          <div className="lg:col-span-4">
+            <div
+              className="rounded-[24px] border p-8 md:p-10 relative"
+              style={{
+                backgroundColor: 'var(--surface)',
+                borderColor: 'var(--line)',
+              }}
+            >
               <div
-                key={a.title}
-                className="rounded-[20px] p-6"
-                style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
+                className="absolute -top-4 -left-4 w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold"
+                style={{
+                  backgroundColor: 'var(--signal-lime)',
+                  color: '#0A1128',
+                }}
               >
-                <h3 className="font-display text-lg font-medium mb-3" style={{ color: 'var(--ink)' }}>
-                  {a.title}
-                </h3>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--ink-60)' }}>
-                  {a.description}
-                </p>
+                "
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Mandate Citations */}
-        <div className="mb-20">
-          <span className="text-mono-label block mb-4" style={{ color: 'var(--ink-60)' }}>
-            LEGAL BASIS
-          </span>
-          <h2 className="text-h2 font-display mb-8" style={{ color: 'var(--ink)' }}>
-            Mandate
-          </h2>
-          <div style={{ borderTop: '1px solid var(--line)' }}>
-            {mandates.map((m, i) => (
-              <div
-                key={m.code}
-                className="py-4"
-                style={{ borderBottom: '1px solid var(--line)' }}
+              <p
+                className="text-xl font-bold leading-tight italic mb-6"
+                style={{ color: 'var(--ink)' }}
               >
-                <button
-                  className="w-full flex items-center justify-between text-left"
-                  onClick={() => setOpenMandate(openMandate === i ? null : i)}
-                >
-                  <span
-                    className="font-mono text-sm font-medium"
-                    style={{ color: 'var(--ink)' }}
-                  >
-                    {m.code}
-                  </span>
-                  {openMandate === i ? (
-                    <Minus size={16} style={{ color: 'var(--ink-60)' }} />
-                  ) : (
-                    <Plus size={16} style={{ color: 'var(--ink-60)' }} />
-                  )}
-                </button>
+                Established through Agenda 21 of the Rio Conference in 1992, CYMG has
+                been at the forefront of youth advocacy within the UN system.
+              </p>
+              <footer
+                className="text-xs font-bold uppercase tracking-widest"
+                style={{ color: 'var(--ink-60)' }}
+              >
+                — Rio Conference Mandate
+              </footer>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Mandate ─────────────────────────────────────────── */}
+        <section className="mb-28">
+          <div className="flex items-center gap-3 mb-3">
+            <div
+              className="flex h-10 w-10 items-center justify-center rounded-lg"
+              style={{ backgroundColor: 'rgba(42,77,255,0.1)' }}
+            >
+              <BookOpen className="w-5 h-5" style={{ color: 'var(--assembly-blue)' }} />
+            </div>
+            <p
+              className="font-mono text-xs uppercase tracking-[0.15em]"
+              style={{ color: 'var(--assembly-blue)' }}
+            >
+              Legal Basis
+            </p>
+          </div>
+          <h2
+            className="text-3xl md:text-4xl font-bold mb-4"
+            style={{ color: 'var(--ink)' }}
+          >
+            Our Mandate
+          </h2>
+          <p
+            className="max-w-2xl text-base md:text-lg leading-relaxed mb-10"
+            style={{ color: 'var(--ink-60)' }}
+          >
+            CYMG&apos;s participation in UNEP and UNEA processes is grounded in these
+            resolutions, frameworks, and engagement mechanisms. Click any item to read
+            a plain-language summary.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {MANDATE_REFS.map((mandate, i) => {
+              const isOpen = openMandate === i;
+              return (
                 <div
-                  className="overflow-hidden transition-all duration-300"
+                  key={mandate.code}
+                  className="rounded-xl border overflow-hidden transition-colors"
                   style={{
-                    maxHeight: openMandate === i ? '200px' : '0',
-                    opacity: openMandate === i ? 1 : 0,
+                    backgroundColor: 'var(--surface)',
+                    borderColor: 'var(--line)',
                   }}
                 >
-                  <p className="text-sm pt-3 leading-relaxed" style={{ color: 'var(--ink-60)' }}>
-                    {m.context}
-                  </p>
+                  <button
+                    onClick={() => setOpenMandate(isOpen ? null : i)}
+                    className="w-full flex items-start gap-3 sm:gap-4 p-4 sm:p-5 text-left transition-colors hover:bg-black/[0.02] dark:hover:bg-white/[0.02]"
+                    aria-expanded={isOpen}
+                  >
+                    <code
+                      className="font-mono text-xs sm:text-sm px-2 py-1 rounded whitespace-nowrap shrink-0"
+                      style={{
+                        color: 'var(--assembly-blue)',
+                        backgroundColor: 'rgba(42,77,255,0.1)',
+                      }}
+                    >
+                      {mandate.code}
+                    </code>
+                    <div className="flex-1 min-w-0">
+                      <p
+                        className="font-medium text-sm sm:text-base leading-snug"
+                        style={{ color: 'var(--ink)' }}
+                      >
+                        {mandate.title}
+                      </p>
+                    </div>
+                    {isOpen ? (
+                      <Minus size={20} style={{ color: 'var(--ink-60)' }} />
+                    ) : (
+                      <Plus size={20} style={{ color: 'var(--ink-60)' }} />
+                    )}
+                  </button>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      transition={{ duration: 0.25, ease: 'easeOut' }}
+                      className="px-4 sm:px-5 pb-5 pt-0"
+                    >
+                      <div
+                        className="border-t pt-4 text-sm leading-relaxed"
+                        style={{ color: 'var(--ink-60)', borderColor: 'var(--line)' }}
+                      >
+                        {mandate.plainLanguage}
+                      </div>
+                    </motion.div>
+                  )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
-        </div>
+        </section>
 
-        {/* Links */}
-        <div className="flex flex-wrap gap-4 mb-16">
-          <Link
-            to="/about/history-mandate"
-            className="btn-pill"
-            style={{ backgroundColor: 'var(--assembly-blue)', color: 'var(--paper)' }}
+        {/* ── Timeline ─────────────────────────────────────────── */}
+        <section className="mb-28">
+          <p
+            className="font-mono text-xs uppercase tracking-[0.15em] mb-3"
+            style={{ color: 'var(--assembly-blue)' }}
           >
-            History &amp; Mandate
+            History
+          </p>
+          <h2
+            className="text-3xl md:text-4xl font-bold mb-10"
+            style={{ color: 'var(--ink)' }}
+          >
+            Milestones
+          </h2>
+
+          <div className="relative">
+            <div
+              className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px md:-translate-x-1/2"
+              style={{ backgroundColor: 'var(--line)' }}
+              aria-hidden="true"
+            />
+            <div className="space-y-8">
+              {timelineEvents.map((event, i) => (
+                <div
+                  key={event.year}
+                  className={`relative flex flex-col md:flex-row gap-6 md:gap-12 ${
+                    i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
+                >
+                  <div className="hidden md:block md:w-1/2" />
+                  <div
+                    className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full -translate-x-1/2 mt-2"
+                    style={{ backgroundColor: 'var(--assembly-blue)' }}
+                    aria-hidden="true"
+                  />
+                  <div className="pl-10 md:pl-0 md:w-1/2">
+                    <div
+                      className="rounded-2xl border p-6"
+                      style={{
+                        backgroundColor: 'var(--surface)',
+                        borderColor: 'var(--line)',
+                      }}
+                    >
+                      <span
+                        className="font-mono text-2xl md:text-3xl font-bold block mb-2"
+                        style={{ color: 'var(--assembly-blue)' }}
+                      >
+                        {event.year}
+                      </span>
+                      <h3
+                        className="text-lg font-bold mb-2"
+                        style={{ color: 'var(--ink)' }}
+                      >
+                        {event.title}
+                      </h3>
+                      <p
+                        className="text-sm md:text-base leading-relaxed"
+                        style={{ color: 'var(--ink-60)' }}
+                      >
+                        {event.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Quick Links ──────────────────────────────────────── */}
+        <section className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-28">
+          <Link
+            to="/history-and-mandate"
+            className="group inline-flex items-center gap-2 text-lg font-bold transition-colors"
+            style={{ color: 'var(--ink)' }}
+          >
+            History & Mandate
+            <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
           </Link>
+          <span className="hidden md:block" style={{ color: 'var(--line)' }}>•</span>
           <Link
             to="/governance"
-            className="btn-pill"
-            style={{ backgroundColor: 'var(--surface)', color: 'var(--ink)', border: '1px solid var(--line)' }}
+            className="group inline-flex items-center gap-2 text-lg font-bold transition-colors"
+            style={{ color: 'var(--ink)' }}
           >
-            Governance
+            Governance Structure
+            <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
           </Link>
+          <span className="hidden md:block" style={{ color: 'var(--line)' }}>•</span>
           <Link
             to="/team"
-            className="btn-pill"
-            style={{ backgroundColor: 'var(--surface)', color: 'var(--ink)', border: '1px solid var(--line)' }}
+            className="group inline-flex items-center gap-2 text-lg font-bold transition-colors"
+            style={{ color: 'var(--ink)' }}
           >
-            Our Team
+            Meet Our Team
+            <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
           </Link>
-        </div>
+        </section>
 
         <NewsletterCTA />
       </div>

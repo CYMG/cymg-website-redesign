@@ -1,70 +1,63 @@
-import type { TimelineEvent } from '@/types';
+export interface TimelineEvent {
+  year: number;
+  title: string;
+  description: string;
+}
 
 export const timelineEvents: TimelineEvent[] = [
   {
-    year: '1972',
-    title: 'Stockholm Conference \u0026 UNEP Founded',
-    description: 'The United Nations Conference on the Human Environment in Stockholm establishes the UN Environment Programme, creating the first global institutional framework for environmental governance.',
-    status: 'live',
+    year: 1972,
+    title: "Stockholm Conference & UNEP Founded",
+    description: "The UN Conference on the Human Environment in Stockholm leads to the creation of the United Nations Environment Programme (UNEP).",
   },
   {
-    year: '1985',
-    title: 'International Youth Year',
-    description: 'The UN designates 1985 as International Youth Year, raising awareness of the important role young people play in the world and beginning a tradition of youth-focused UN programming.',
-    status: 'live',
+    year: 1985,
+    title: "International Youth Year",
+    description: "The UN designates 1985 as International Youth Year, recognising the role of young people in global development.",
   },
   {
-    year: '1992',
-    title: 'Major Groups Approach via Agenda 21 / Rio Earth Summit',
-    description: 'The UN Conference on Environment and Development in Rio de Janeiro adopts Agenda 21, establishing the Major Groups framework that would eventually include Children and Youth as a formal stakeholder constituency.',
-    status: 'live',
+    year: 1992,
+    title: "Major Groups & Agenda 21",
+    description: "The Rio Earth Summit establishes the Major Groups approach via Agenda 21, formally including sectors like children and youth in UN sustainability processes.",
   },
   {
-    year: '2003',
-    title: 'TUNZA Strategy Launched',
-    description: 'UNEP launches the TUNZA youth strategy, creating a dedicated programme for children and youth engagement in environmental issues under the broader UNEP umbrella.',
-    status: 'live',
+    year: 2003,
+    title: "TUNZA Strategy Launched",
+    description: "UNEP launches the TUNZA strategy, creating a structured programme for children and youth participation in environmental action.",
   },
   {
-    year: '2003–2013',
-    title: 'TUNZA Conference Era',
-    description: 'A decade of international TUNZA conferences bringing together young environmental leaders: Daejeon (2009), Nagoya (2010), Bandung (2011), and others, building the youth environmental movement globally.',
-    status: 'live',
+    year: 2011,
+    title: "Bandung Declaration",
+    description: "The Bandung Declaration is adopted at the TUNZA International Youth Conference, charting a youth vision for sustainable development.",
   },
   {
-    year: '2012',
-    title: 'CYMG Founded',
-    description: 'The Children and Youth Major Group to UNEP is formally established in mid-2012, becoming the official UN-recognized youth constituency engaging with UNEP processes.',
-    status: 'live',
+    year: 2012,
+    title: "CYMG Founded",
+    description: "The Children and Youth Major Group to UNEP is formally established as the official UN-recognized constituency for youth engagement.",
   },
   {
-    year: '2013–2014',
-    title: 'UNEA Established, 9 Major Groups Formalized',
-    description: 'The UN Environment Assembly is created as the world\'s highest-level decision-making body on the environment, formalizing the participation of 9 Major Groups including Children and Youth in UNEP governance.',
-    status: 'live',
+    year: 2013,
+    title: "UNEA Established",
+    description: "The United Nations Environment Assembly (UNEA) is established as UNEP's governing body, with formalized stakeholder engagement.",
   },
   {
-    year: '2020',
-    title: 'Inaugural Virtual Youth Environment Assembly',
-    description: 'CYMG hosts the first-ever virtual Youth Environment Assembly, bringing together hundreds of young delegates online during the COVID-19 pandemic to maintain momentum for youth environmental engagement.',
-    status: 'live',
+    year: 2020,
+    title: "Inaugural Virtual YEA",
+    description: "The first virtual Youth Environment Assembly (YEA) is held, adapting youth engagement to the constraints of the global pandemic.",
   },
   {
-    year: '2021',
-    title: 'Second Virtual YEA + Chemicals \u0026 Waste Youth Platform',
-    description: 'The second virtual Youth Environment Assembly expands participation, and CYMG launches the Chemicals \u0026 Waste Youth Platform to coordinate youth engagement in chemicals governance.',
-    status: 'live',
+    year: 2022,
+    title: "First Global YEA & Stockholm+50",
+    description: "The first in-person Global Youth Environment Assembly is held alongside Stockholm+50, marking a major mobilization of youth voices.",
   },
   {
-    year: '2022',
-    title: 'First In-Person Global Youth Environment Assembly + Stockholm+50',
-    description: 'The first in-person Global Youth Environment Assembly takes place, coinciding with the Stockholm+50 international meeting that commemorated 50 years since the 1972 Conference. CYMG leads major youth mobilization.',
-    status: 'live',
+    year: 2024,
+    title: "Second Global YEA",
+    description: "The second Global Youth Environment Assembly convenes delegates ahead of UNEA-6, shaping youth policy inputs and declarations.",
   },
   {
-    year: '2024',
-    title: 'Second Global Youth Environment Assembly',
-    description: 'The second Global Youth Environment Assembly brings together youth delegates from across the world, producing the Global Youth Declaration on the Environment and setting priorities for UNEA-7.',
-    status: 'live',
+    year: 2025,
+    title: "Youth Environment Assembly 2025",
+    description: "Preparing for the largest youth-led environmental gathering in Nairobi ahead of UNEA-7.",
   },
 ];

@@ -31,17 +31,24 @@ export default function Meas() {
               What are MEAs?
             </h2>
             <p className="text-body-lg leading-relaxed mb-4" style={{ color: 'var(--ink)' }}>
-              Multilateral Environmental Agreements (MEAs) are international treaties that address
-              environmental issues of global concern. They establish frameworks for cooperation among
-              nations to tackle challenges such as biodiversity loss, climate change, chemical pollution,
-              and ozone depletion.
+              Multilateral Environmental Agreements (MEAs) are international treaties, conventions,
+              protocols, and other legally binding instruments between multiple countries that are
+              designed to address specific environmental issues or challenges. They are negotiated and
+              adopted by participating countries to establish common frameworks, principles, and
+              commitments for addressing shared environmental concerns at the global or regional level.
+            </p>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--ink-60)' }}>
+              MEAs can cover a wide range of environmental issues, including biodiversity conservation,
+              climate change, ozone depletion, chemicals and waste, and pollution. They are essential
+              tools for promoting international collaboration in addressing critical environmental
+              problems that transcend national boundaries.
             </p>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--ink-60)' }}>
-              UNEP serves as the secretariat for several key MEAs including the Convention on
-              Biological Diversity (CBD), the Convention on International Trade in Endangered Species
-              (CITES), the Basel Convention, and the Montreal Protocol. CYMG engages with these
-              processes to ensure youth perspectives are represented in environmental treaty
-              implementation and negotiation.
+              In its capacity as the leading global environmental authority, the United Nations
+              Environment Programme (UNEP) has been entrusted by the governing bodies of numerous MEAs
+              to serve as the designated entity for providing essential secretariat functions to these
+              conventions, and to provide comprehensive support for the enhancement of national
+              capacities.
             </p>
           </div>
           <div
@@ -69,6 +76,40 @@ export default function Meas() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        {/* Youth Engagement */}
+        <div
+          className="rounded-[20px] p-8 md:p-10 mb-16"
+          style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
+        >
+          <h2 className="text-h2 font-display mb-4" style={{ color: 'var(--ink)' }}>
+            Youth Engagement in MEA Processes
+          </h2>
+          <div className="space-y-4 text-sm md:text-base leading-relaxed" style={{ color: 'var(--ink-60)' }}>
+            <p>
+              Youth engagement within the processes of Multilateral Environmental Agreements is crucial
+              for fostering inclusive and informed decision-making. As the official children and youth
+              constituency contributing to and participating in intergovernmental policy processes at
+              UNEP, CYMG holds a strategic position to facilitate and enhance youth engagement in MEAs.
+            </p>
+            <p>
+              CYMG has a track record of effectively supporting youth and children in engaging within MEA
+              processes, including meetings under the Montreal Protocol, Vienna Convention, CMS, CITES,
+              BRS Conventions, and other significant forums.
+            </p>
+            <p>
+              In 2023, CYMG was accredited to the Convention for the Protection and Development of the
+              Marine Environment of the Wider Caribbean Region (Cartagena Convention) and its Protocols
+              as an Observer Entity. The UNEP Ozone Secretariat also invited CYMG to nominate youth
+              observers to the 35th Meeting of the Parties to the Montreal Protocol (MOP35).
+            </p>
+            <p>
+              CYMG operationalizes its commitment through specialized thematic working groups and
+              associated networks/platforms, fostering comprehensive consultations that actively involve
+              youth and children in shaping perspectives on matters of negotiation under MEAs.
+            </p>
           </div>
         </div>
 

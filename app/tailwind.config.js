@@ -5,6 +5,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        ink: "#0A1128",
+        "assembly-blue": "#1E40AF",
+        "signal-lime": "#F59E0B",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -48,6 +51,11 @@ module.exports = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        sans: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+        display: ["Plus Jakarta Sans", "sans-serif"],
+        mono: ["IBM Plex Mono", "monospace"],
       },
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",

@@ -248,6 +248,94 @@ Registration for YEA 2025 and UNEA-7 will open in mid-2025. Priority is given to
     publishDate: '2025-01-15',
     readTime: 6,
   },
+  {
+    id: '8',
+    title: 'Resolution Recap Series: Resolution on Enhancing the Meaningful Participation of Youth in Environmental Processes and in Environmental Education',
+    slug: 'resolution-recap-youth-participation-education',
+    excerpt: 'Out of the 15 resolutions proposed in the UNEA-7 cycle, the “Youth Resolution” could be considered CYMG’s brainchild. This recap examines what the resolution is about, what happened in the negotiation room, and how CYMG contributed.',
+    content: `Out of the 15 resolutions proposed in the UNEA-7 cycle, the “Resolution on Enhancing the Meaningful Participation of Youth in Environmental Processes and in Environmental Education”, or simply the “Youth Resolution”, could be considered CYMG’s brainchild. Conversations around a potential youth resolution started in late 2022, and accelerated in 2023 in the lead-up to UNEA-6. However, after failing to secure a Member State sponsor, CYMG turned its attention to UNEA-7.
+
+Efforts in 2024 ahead of UNEA-7 re-started with a new CYMG-developed concept note for the Youth Resolution, circulated among Member States (MS). After months of intense advocacy, CYMG members were elated to see their hard-earned work pay off, with a draft UNEA-7 resolution tabled by Sri Lanka. The first draft of the resolution centered around key demands including, but not limited to, the integration of children and youth within environmental decision making processes and empowering them with the green skills and tools to advance their green careers.
+
+While some of the text’s ambition was lost throughout the negotiations, the ultimate adoption of the resolution can still be seen as a milestone in the institutionalisation of youth participation in environmental governance.
+
+## What Happened in the Room & How CYMG Contributed
+
+Early on in the negotiation room, several delegations had demonstrated their unease with the resolution’s content, with some delegations going as far as to suggest the withdrawal of the resolution altogether, under the guise that the way that it was written would encroach on the sovereign right of the state over its decision making process. Other delegations showed a more restrained response to the content of the resolution, identifying a number of red lines, including:
+
+- Establishing a clear understanding of the term “youth”, bearing in mind the individual regulations of each Member State (MS): The majority of Member states opposed the inclusion of legal minors including children in environmental policymaking processes.
+- Removing the term “green skills” and, instead, referring to “skills for sustainable lifestyles”, a term used in previous UNEA resolutions.
+- Removing any examples that guide the applications of the articles of the resolution on the national level, including mentions of the establishment of youth councils.
+- Eliminating any explicit mention of the integration of youth in the decision making process, instead referring to the inclusion of young people in “environmental processes”.
+
+The youth resolution has also seen cross-cutting contentions that reverberated across multiple discussions during UNEA-7, including: 1) Rejection of references to intergovernmentally agreed language on the meaningful engagement of youth, 2) rejection of text that may imply reliance on citizen science and/or indigenous knowledge; and 3) the addition of qualifiers like “consider doing”, “may”, "invites" etc., which generally represent weaker commitment.
+
+CYMG advocated for a high level of ambition both during the formal negotiations, delivering official statements within the negotiation room, and through extensive engagement with Member States beyond formal settings. In addition to directly arguing in favour of specific elements of the text and against weakened wording, CYMG was able to supply draft wording, arguments, and historical policy evidence to sponsor Member States.
+
+## Evaluating the final UNEA-7 outcome
+
+Despite some disappointing amendments, this resolution secured several milestone wins:
+
+- The recognition of the disproportionate impact of the triple planetary crisis on Children and Youth, and the acknowledgment of the exacerbating impact such crises pose on vulnerable communities.
+- The recognition of the role of the Children and Youth Major Group and the Youth Environment Assembly as the official platform for the amplification of the full, effective, meaningful, constructive and inclusive participation of youth in environmental processes.
+- The invitation for MS to provide youth with “full, effective, meaningful, constructive and inclusive participation in environmental matters and processes,” and to consider the introduction of environmental education and competences relevant for sustainable development and work.
+
+## The bottom line
+
+Here is how you can help pave an even more ambitious and positive way forward for implementation at the local, national and regional levels:
+
+- Start local conversations to enhance the understanding that young people have of environmental issues and policymaking.
+- Urge your local and national governments to recognize the role of children within decision-making processes through the establishment of children and youth councils and advisor groups.
+- Work with youth networks to strengthen youth participation in regional intergovernmental fora, including processes that fall under the UN Regional Commissions.
+- Join and contribute to CYMG and other global youth constituencies to feed into international processes like UNEA and the Rio Conventions (UNFCCC, UNCBD, UNCCD).`,
+    featuredImage: '/images/bento/resolution-recap.jpg',
+    author: { name: 'Nada Mohamed', bio: 'CYMG delegate and policy contributor tracking UNEA-7 negotiations.' },
+    tags: ['Resolution Recap', 'UNEA-7', 'Youth Participation'],
+    publishDate: '2025-03-15',
+    readTime: 8,
+    relatedSlugs: ['resolution-recap-unea-6', 'unea-7-consultations'],
+  },
+  {
+    id: '9',
+    title: 'Resolution Recap Series – Strengthening the global management of wildfires',
+    slug: 'resolution-recap-wildfires',
+    excerpt: 'This Cluster A resolution, introduced by India, affirms the link between wildfires and human activities, formalizing UNEP’s role in prevention and response.',
+    content: `**Resolution Name:** Strengthening the global management of wildfires  
+**Cluster:** A  
+**Authors:** Benson Riang, Aysha Emmerson
+
+## What This Resolution Is About
+
+This Cluster A resolution, introduced by India, affirms the link between wildfires and human activities, formalizing UNEP’s role in prevention and response. Citing UNEP’s 2022 report *Spreading like Wildfire: The Rising Threat of Extraordinary Landscape Fires*, Member States call for an integrated, science-based international approach to strengthening national and regional wildfire management.
+
+The resolution requires the Executive Director of UNEP—subject to available resources—to work with other UN entities, particularly the FAO’s Global Wildfire Management Hub, to equip Member States with guiding principles, capacity-building resources, and frameworks for addressing wildfire-related issues. A progress report is due at UNEA’s eighth session, and private-sector partners are encouraged to mobilize resources in the meantime, especially for developing countries.
+
+## What Happened in the Room & How CYMG Contributed
+
+Questions about 1) whose knowledge counts in wildfire management, and 2) the credibility, scope, and significance of different methodologies for wildfire preparedness were at stake during negotiations. CYMG’s interventions, bilaterals, and textual suggestions focused on affirming youth’s unique vulnerability to wildfires and potential to be part of solutions, particularly early warning, monitoring, and restoration efforts. The delegation urged inclusive approaches that braid traditional knowledge systems with the best available science, alongside concrete financial commitments.
+
+CYMG members engaged in discussions with Member States, such as Canada, which introduced language referencing youth’s key role as stakeholders in wildfire management. However, this language was removed from the final text. Informal negotiations focused extensively on cross-cutting language about integrating Indigenous peoples’ and local communities’ knowledge in wildfire management.
+
+Member States also discussed overlap with existing global wildfire initiatives and the draft text’s level of detail regarding coordination mechanisms. Delegates diverged over phrases such as technology-sharing based on “voluntary and mutually agreed terms,” “whole-of-society approach,” and “all stakeholders and partners.”
+
+## Evaluating the UNEA-7 Outcome
+
+Ultimately, only the broadest acceptable language survived sensitive negotiations. The final text does not name any specific stakeholders or partners as relevant actors in wildfire response. Instead, it uses general language that can accommodate different national circumstances, which risks creating less inclusive processes and, consequently, less equitable and responsive outcomes. Youth and children are also not mentioned in the final resolution, despite CYMG’s efforts to link wildfires to intergenerational equity.
+
+The resolution enhances cooperation on early warning systems, knowledge-sharing, training, financing, and other adaptation, mitigation, and resilience measures, including regional action plans for wildfire-prone areas. More positively, by taking “note” of the Kananaskis Wildfire Charter, the resolution nods to the importance of community-based solutions for sustainable forest management and wildfire risk mitigation, including Indigenous-led fire stewardship.
+
+## What This Means for Youth
+
+Rather than viewing it as a limitation, taking advantage of the resolution’s broad language, youth can play a key role in implementation. We stand to benefit or lose the most from wildfire-related employment, training, and capacity-building opportunities associated with this resolution. Young people can bargain for fair pay and benefits, and should ensure they have a seat at the table in drafting the report for UNEA-8.
+
+Additionally, as UNEP shifts toward implementation, given youth’s unique vulnerability, we can take advantage of the resolution’s broad language related to the “health impacts of wildfires” to argue for specific physical as well as mental health supports. To urge accountability for root causes, the link between human-induced climate change and wildfire management should be front and centre in youth advocacy.`,
+    featuredImage: '/images/bento/ocean-governance.jpg',
+    author: { name: 'Benson Riang & Aysha Emmerson', bio: 'CYMG policy contributors covering UNEA-7 Cluster A resolutions.' },
+    tags: ['Resolution Recap', 'UNEA-7', 'Wildfires'],
+    publishDate: '2025-03-06',
+    readTime: 8,
+    relatedSlugs: ['resolution-recap-youth-participation-education', 'unea-7-consultations'],
+  },
 ];
 
 export const blogTagFilters = [

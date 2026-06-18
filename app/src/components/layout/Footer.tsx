@@ -3,36 +3,38 @@ import { Instagram, Twitter, Youtube, Linkedin, Facebook } from 'lucide-react';
 
 const footerColumns = [
   {
-    title: 'About',
+    title: 'Organization',
     links: [
       { label: 'About CYMG', href: '/about' },
-      { label: 'History \u0026 Mandate', href: '/about/history-mandate' },
+      { label: 'History & Mandate', href: '/history-and-mandate' },
       { label: 'Governance', href: '/governance' },
+      { label: 'Our Team', href: '/team' },
     ],
   },
   {
     title: 'Thematic Areas',
     links: [
       { label: 'Working Groups', href: '/working-groups' },
-      { label: 'Chemicals \u0026 Waste', href: '/working-groups/chemicals-waste-pollution' },
-      { label: 'Nature \u0026 Ecosystems', href: '/working-groups/nature-ecosystems' },
-      { label: 'Ocean Science', href: '/working-groups/ocean-science-governance' },
+      { label: 'Chemicals & Waste', href: '/working-groups' },
+      { label: 'Nature & Ecosystems', href: '/working-groups' },
+      { label: 'Ocean Governance', href: '/working-groups' },
     ],
   },
   {
-    title: 'UNEA',
+    title: 'Engagement',
     links: [
       { label: 'UNEA Hub', href: '/unea-and-core-processes' },
       { label: 'YEA 2025', href: '/unea-and-core-processes' },
-      { label: 'UNEA-7 Consultations', href: '/unea-and-core-processes' },
+      { label: 'Global Youth Deployment', href: '/join' },
     ],
   },
   {
-    title: 'Connect',
+    title: 'Resources',
     links: [
-      { label: 'Join CYMG', href: '/join' },
-      { label: 'Contact', href: '/contact' },
-      { label: 'Policies \u0026 Safeguarding', href: '/about/policies-and-safeguarding' },
+      { label: 'Latest Stories', href: '/blog' },
+      { label: 'Documents Hub', href: '/documents' },
+      { label: 'Events Calendar', href: '/calendar' },
+      { label: 'Policies', href: '/policies-and-safeguarding' },
     ],
   },
 ];
@@ -47,26 +49,28 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer
-      className="w-full"
-      style={{ backgroundColor: 'var(--ink)', color: 'var(--paper)' }}
-    >
-      <div className="max-w-[1320px] mx-auto px-6 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
-          <div className="col-span-2">
-            <h3 className="font-display text-xl font-bold mb-3">CYMG</h3>
-            <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--ink-60)', opacity: 0.8 }}>
-              The official UN-recognized children and youth constituency engaging with UNEP, UNEA, and Multilateral Environmental Agreements.
+    <footer className="w-full bg-[#0A1128] text-white pt-24 pb-12">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-20">
+          <div className="lg:col-span-2">
+            <Link to="/" className="inline-block mb-6">
+              <img
+                src="/cymg-logo-refined.svg"
+                alt="CYMG — Children and Youth Major Group"
+                className="h-12 w-auto"
+              />
+            </Link>
+            <p className="text-slate-400 text-sm leading-relaxed mb-8 max-w-sm">
+              The formal channel for children and youth participation in the UN Environment Programme, empowering the next generation to lead global environmental action.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full transition-opacity hover:opacity-70"
-                  style={{ color: 'var(--paper)' }}
+                  className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white transition-all hover:bg-[var(--assembly-blue)] hover:scale-110"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -77,19 +81,15 @@ export default function Footer() {
 
           {footerColumns.map((col) => (
             <div key={col.title}>
-              <h4
-                className="text-mono-label font-medium mb-4"
-                style={{ color: 'var(--ink-60)', opacity: 0.7 }}
-              >
+              <h4 className="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-slate-500">
                 {col.title}
               </h4>
-              <ul className="flex flex-col gap-2">
+              <ul className="flex flex-col gap-4">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       to={link.href}
-                      className="text-sm transition-opacity hover:opacity-70"
-                      style={{ color: 'var(--paper)' }}
+                      className="text-sm text-slate-300 transition-colors hover:text-white"
                     >
                       {link.label}
                     </Link>
@@ -100,16 +100,14 @@ export default function Footer() {
           ))}
         </div>
 
-        <div
-          className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
-          style={{ borderColor: 'var(--ink-60)', opacity: 0.3 }}
-        >
-          <p className="text-mono-sm" style={{ opacity: 0.6 }}>
-            All rights reserved &copy; {new Date().getFullYear()} Children and Youth Major Group to UNEP.
-          </p>
-          <p className="text-mono-sm" style={{ opacity: 0.5 }}>
-            Youth Leading Environmental Action.
-          </p>
+        <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-xs text-slate-500 font-medium">
+            &copy; {new Date().getFullYear()} Children and Youth Major Group. All rights reserved.
+          </div>
+          <div className="flex gap-8 text-xs text-slate-500 font-medium">
+            <Link to="/policies-and-safeguarding" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link>
+          </div>
         </div>
       </div>
     </footer>

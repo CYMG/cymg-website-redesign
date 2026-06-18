@@ -3,34 +3,17 @@ import { Link } from 'react-router-dom';
 import { workingGroups, clusterFilters, clusterColors } from '@/data/workingGroups';
 import Badge from '@/components/ui/Badge';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { motion } from 'framer-motion';
+import { Layers, ShieldCheck, Zap, ArrowRight } from 'lucide-react';
 
 function WgBadgeIcon({ cluster }: { cluster: string }) {
-  const color = clusterColors[cluster as keyof typeof clusterColors]?.color || '#2A4DFF';
   return (
     <div
-      className="w-16 h-16 rounded-full flex items-center justify-center mb-4"
-      style={{ backgroundColor: color + '15' }}
+      className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-line dark:border-white/5 bg-white dark:bg-slate-800"
     >
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        {cluster === 'pollution' && (
-          <>
-            <circle cx="16" cy="16" r="6" />
-            <path d="M16 6v4M16 22v4M6 16h4M22 16h4M9.17 9.17l2.83 2.83M20 20l2.83 2.83M9.17 22.83l2.83-2.83M20 12l2.83-2.83" />
-          </>
-        )}
-        {cluster === 'nature' && (
-          <>
-            <path d="M16 4C10 4 6 10 6 16s4 12 10 12 10-6 10-12S22 4 16 4z" />
-            <path d="M16 10v12M12 14c2-2 8-2 8 0M12 18c2 2 8 2 8 0" opacity="0.5" />
-          </>
-        )}
-        {cluster === 'policy' && (
-          <>
-            <rect x="6" y="4" width="20" height="24" rx="2" />
-            <path d="M10 10h12M10 14h8M10 18h10M10 22h6" opacity="0.5" />
-          </>
-        )}
-      </svg>
+      {cluster === 'pollution' && <ShieldCheck size={28} className="text-amber-500" />}
+      {cluster === 'nature' && <Layers size={28} className="text-emerald-500" />}
+      {cluster === 'policy' && <Zap size={28} className="text-blue-500" />}
     </div>
   );
 }
@@ -44,32 +27,36 @@ export default function WorkingGroupsHub() {
   }, [activeFilter]);
 
   return (
-    <div style={{ backgroundColor: 'var(--paper)' }}>
-      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--canopy-green)' }}>
-        <div className="max-w-[1320px] mx-auto">
+    <div className="bg-paper dark:bg-ink min-h-screen">
+      {/* Hero */}
+      <div className="pt-32 pb-20 px-6 bg-[#0A1128] text-white">
+        <div className="max-w-7xl mx-auto">
           <Breadcrumbs items={[{ label: 'Thematic Working Groups' }]} />
-          <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
-            Thematic Working Groups
-          </h1>
-          <p className="text-body-lg mt-4 max-w-[600px]" style={{ color: 'rgba(246,243,234,0.8)' }}>
-            13 groups coordinating global youth voices across every major environmental theme.
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl md:text-6xl font-extrabold mt-8 tracking-tight"
+          >
+            Thematic <span className="text-[var(--assembly-blue)]">Working Groups</span>
+          </motion.h1>
+          <p className="text-xl text-slate-400 mt-6 max-w-3xl leading-relaxed">
+            Thirteen specialized groups coordinating global youth voices across every major environmental priority.
           </p>
         </div>
       </div>
 
-      <div className="max-w-[1320px] mx-auto px-6 py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Filter */}
-        <div className="flex flex-wrap gap-2 mb-10">
+        <div className="flex flex-wrap gap-2 mb-12 bg-white dark:bg-slate-900 p-4 rounded-3xl shadow-xl border border-line dark:border-white/5">
           {clusterFilters.map((f) => (
             <button
               key={f.value}
               onClick={() => setActiveFilter(f.value)}
-              className="text-mono-sm px-4 py-2 rounded-full transition-all duration-200"
-              style={{
-                backgroundColor: activeFilter === f.value ? 'var(--assembly-blue)' : 'var(--surface)',
-                color: activeFilter === f.value ? 'var(--paper)' : 'var(--ink)',
-                border: activeFilter === f.value ? 'none' : '1px solid var(--line)',
-              }}
+              className={`px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest transition-all ${
+                activeFilter === f.value
+                  ? 'bg-[var(--assembly-blue)] text-white shadow-lg'
+                  : 'bg-transparent text-slate-500 hover:text-[var(--assembly-blue)]'
+              }`}
             >
               {f.label}
             </button>
@@ -77,34 +64,34 @@ export default function WorkingGroupsHub() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filtered.map((wg) => (
-            <Link
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filtered.map((wg, i) => (
+            <motion.div
               key={wg.id}
-              to={`/working-groups/${wg.slug}`}
-              className="group rounded-[20px] p-6 flex flex-col items-start transition-shadow duration-300 hover:shadow-lg"
-              style={{
-                backgroundColor: 'var(--surface)',
-                border: '1px solid var(--line)',
-              }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: (i % 3) * 0.1 }}
             >
-              <WgBadgeIcon cluster={wg.cluster} />
-              <Badge color={clusterColors[wg.cluster].color}>
-                {clusterColors[wg.cluster].label}
-              </Badge>
-              <h3 className="font-display text-lg font-medium mt-3 mb-2" style={{ color: 'var(--ink)' }}>
-                {wg.name}
-              </h3>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: 'var(--ink-60)' }}>
-                {wg.description}
-              </p>
-              <span
-                className="text-sm font-medium mt-4 inline-flex items-center gap-1 transition-opacity group-hover:opacity-70"
-                style={{ color: 'var(--assembly-blue)' }}
+              <Link
+                to={`/working-groups/${wg.slug}`}
+                className="group bg-white dark:bg-slate-900 rounded-[32px] p-10 flex flex-col items-start transition-all duration-500 border border-line dark:border-white/5 shadow-sm hover:shadow-2xl hover:-translate-y-2 h-full"
               >
-                Learn more →
-              </span>
-            </Link>
+                <WgBadgeIcon cluster={wg.cluster} />
+                <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border-none font-black text-[10px] tracking-widest mb-4">
+                  {clusterColors[wg.cluster].label}
+                </Badge>
+                <h3 className="text-2xl font-black text-ink dark:text-paper mb-4 leading-tight group-hover:text-[var(--assembly-blue)] transition-colors">
+                  {wg.name}
+                </h3>
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-8 flex-1">
+                  {wg.description}
+                </p>
+                <div className="flex items-center gap-2 text-sm font-black text-[var(--assembly-blue)] uppercase tracking-widest">
+                  View Detail <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
+                </div>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>

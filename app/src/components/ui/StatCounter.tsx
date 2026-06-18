@@ -15,8 +15,15 @@ export default function StatCounter({ value, suffix = '', label, detail }: StatC
   const reducedMotion = useReducedMotion();
 
   useEffect(() => {
+    if (reducedMotion) {
+      setDisplayValue(value);
+      return;
+    }
+  }, [reducedMotion, value]);
+
+  useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || hasAnimated) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -26,11 +33,11 @@ export default function StatCounter({ value, suffix = '', label, detail }: StatC
             setDisplayValue(value);
             return;
           }
-          const duration = 2000;
+          const duration = 1200;
           const startTime = performance.now();
           const animate = (now: number) => {
             const elapsed = now - startTime;
-            const progress = Math.min(elapsed / duration);
+            const progress = Math.min(elapsed / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 3);
             setDisplayValue(Math.round(eased * value));
             if (progress < 1) requestAnimationFrame(animate);
@@ -38,11 +45,23 @@ export default function StatCounter({ value, suffix = '', label, detail }: StatC
           requestAnimationFrame(animate);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1, rootMargin: '0px 0px -10% 0px' }
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+
+    // Fallback: ensure value is shown even if observer never fires
+    const fallback = setTimeout(() => {
+      if (!hasAnimated) {
+        setHasAnimated(true);
+        setDisplayValue(value);
+      }
+    }, 4000);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallback);
+    };
   }, [value, hasAnimated, reducedMotion]);
 
   return (

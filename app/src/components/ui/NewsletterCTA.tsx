@@ -12,7 +12,7 @@ export default function NewsletterCTA() {
 
   return (
     <div
-      className="max-w-[600px] mx-auto rounded-[20px] border p-8 text-center"
+      className="max-w-[600px] mx-auto rounded-[20px] border p-6 md:p-8 text-center my-16 md:my-24"
       style={{
         backgroundColor: 'var(--surface)',
         borderColor: 'var(--line)',
