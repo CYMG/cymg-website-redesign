@@ -30,7 +30,7 @@ export default function Blog() {
   return (
     <div style={{ backgroundColor: 'var(--paper)' }}>
       <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--ink)' }}>
-        <div className="max-w-[1320px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'Blog' }]} />
           <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
             Policy Notes
@@ -38,7 +38,7 @@ export default function Blog() {
         </div>
       </div>
 
-      <div className="max-w-[1320px] mx-auto px-6 py-16 md:py-24">
+      <div className="max-w-[1240px] mx-auto px-6 py-16 md:py-24">
         {/* Featured Post */}
         <div className="mb-16">
           <span className="text-mono-label block mb-4" style={{ color: 'var(--ink-60)' }}>
@@ -93,7 +93,7 @@ export default function Blog() {
                 onClick={() => setTagFilter(f.value)}
                 className="text-mono-sm px-4 py-2 rounded-sm transition-all"
                 style={{
-                  backgroundColor: tagFilter === f.value ? 'var(--assembly-blue)' : 'var(--surface)',
+                  backgroundColor: tagFilter === f.value ? 'var(--unep-blue)' : 'var(--surface)',
                   color: tagFilter === f.value ? 'var(--paper)' : 'var(--ink)',
                   border: tagFilter === f.value ? 'none' : '1px solid var(--line)',
                 }}

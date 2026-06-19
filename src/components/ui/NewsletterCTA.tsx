@@ -11,13 +11,13 @@ export default function NewsletterCTA() {
   };
 
   return (
-    <div className="max-w-[600px] mx-auto border border-line p-6 md:p-8 text-center my-16 md:my-24 bg-surface">
-      <h3 className="text-xl font-semibold text-ink mb-2">Stay informed</h3>
-      <p className="text-sm text-[var(--ink-60)] mb-6">
+    <div className="max-w-[600px] mx-auto border-t border-line pt-10 pb-8 text-center my-16 md:my-24">
+      <h3 className="text-2xl font-medium text-ink mb-2">Stay informed</h3>
+      <p className="text-base text-[var(--ink-60)] font-light mb-6">
         Receive updates on consultations, events, and opportunities.
       </p>
       {submitted ? (
-        <div className="flex items-center justify-center gap-2 py-3 text-[var(--canopy-green)]">
+        <div className="flex items-center justify-center gap-2 py-3 text-[var(--unep-green)]">
           <Check size={18} />
           <span className="text-sm font-medium">Thanks for subscribing.</span>
         </div>
@@ -34,13 +34,13 @@ export default function NewsletterCTA() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
               required
-              className="w-full pl-9 pr-4 py-2.5 text-sm outline-none border border-line bg-paper focus:border-[var(--assembly-blue)]"
+              className="w-full pl-9 pr-4 py-3 text-sm outline-none border border-line bg-paper focus:border-[var(--unep-blue)] font-light"
               style={{ color: 'var(--ink)' }}
             />
           </div>
           <button
             type="submit"
-            className="px-5 py-2.5 text-sm font-medium text-white bg-[var(--assembly-blue)] hover:bg-[var(--assembly-blue-deep)] transition-colors"
+            className="px-6 py-3 text-xs font-bold uppercase tracking-[0.1em] text-white bg-[var(--unep-green)] hover:bg-[var(--unep-green-deep)] transition-colors"
           >
             Subscribe
           </button>

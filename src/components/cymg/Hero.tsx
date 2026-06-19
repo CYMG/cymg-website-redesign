@@ -3,45 +3,50 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="bg-paper border-b border-line">
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 py-20 md:py-28">
-          <div className="flex flex-col justify-center">
-            <p className="text-sm text-[var(--canopy-green)] font-medium mb-4">
+    <section className="relative min-h-[600px] md:min-h-[700px] flex items-end">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://ik.imagekit.io/5zp8ovb7c/CYMG/CYMG.jpeg?updatedAt=1765784359910"
+          alt="CYMG youth representatives at a UN meeting"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 w-full">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="max-w-3xl">
+            <p className="text-xs uppercase tracking-[0.15em] text-white/80 mb-4">
               Children and Youth Major Group to UNEP
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-ink leading-[1.15] tracking-tight mb-6">
-              The official youth voice in UN environmental governance.
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-[1.1] mb-6">
+              The official youth voice in UN environmental governance
             </h1>
-            <p className="text-lg text-[var(--ink-60)] leading-relaxed mb-8 max-w-xl">
+            <p className="text-lg md:text-xl text-white/85 leading-relaxed mb-8 max-w-2xl font-light">
               CYMG is the UN-recognized constituency for children and youth engaging with UNEP, UNEA, and multilateral environmental agreements.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 to="/join"
-                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-[var(--assembly-blue)] hover:bg-[var(--assembly-blue-deep)] transition-colors"
+                className="inline-block px-6 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-white border border-white/80 hover:bg-white hover:text-ink transition-colors"
               >
                 Join CYMG
-                <ArrowRight size={16} />
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-ink border border-line hover:bg-surface transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[var(--unep-blue)] transition-colors"
               >
-                About us
+                About us <ArrowRight size={16} />
               </Link>
             </div>
           </div>
+        </div>
 
-          <div className="relative">
-            <div className="aspect-[4/3] border border-line overflow-hidden">
-              <img
-                src="https://ik.imagekit.io/5zp8ovb7c/CYMG/CYMG.jpeg?updatedAt=1765784359910"
-                alt="CYMG youth representatives at a UN meeting"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+        {/* Photo credit */}
+        <div className="absolute bottom-2 right-4 text-[10px] text-white/60 italic">
+          Photo: CYMG
         </div>
       </div>
     </section>

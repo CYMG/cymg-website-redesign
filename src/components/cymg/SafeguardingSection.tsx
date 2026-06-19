@@ -74,7 +74,7 @@ export function SafeguardingSection() {
 
   return (
     <section id="safeguarding" className="py-20 bg-paper dark:bg-ink">
-      <div className="max-w-[1320px] mx-auto px-6">
+      <div className="max-w-[1240px] mx-auto px-6">
         <motion.div
           variants={containerVariants}
           initial="hidden"

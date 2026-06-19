@@ -30,8 +30,8 @@ export default function Documents() {
 
   return (
     <div style={{ backgroundColor: 'var(--paper)' }}>
-      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--assembly-blue)' }}>
-        <div className="max-w-[1320px] mx-auto">
+      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--unep-blue)' }}>
+        <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'Documents' }]} />
           <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
             Document Library
@@ -39,7 +39,7 @@ export default function Documents() {
         </div>
       </div>
 
-      <div className="max-w-[1320px] mx-auto px-6 py-16 md:py-24">
+      <div className="max-w-[1240px] mx-auto px-6 py-16 md:py-24">
         {/* Filters */}
         <div className="flex flex-col md:flex-row gap-4 mb-10">
           <div className="flex flex-wrap gap-2">
@@ -49,7 +49,7 @@ export default function Documents() {
                 onClick={() => setTypeFilter(f.value)}
                 className="text-mono-sm px-4 py-2 rounded-sm transition-all"
                 style={{
-                  backgroundColor: typeFilter === f.value ? 'var(--assembly-blue)' : 'var(--surface)',
+                  backgroundColor: typeFilter === f.value ? 'var(--unep-blue)' : 'var(--surface)',
                   color: typeFilter === f.value ? 'var(--paper)' : 'var(--ink)',
                   border: typeFilter === f.value ? 'none' : '1px solid var(--line)',
                 }}
@@ -111,14 +111,14 @@ export default function Documents() {
                 <div className="flex gap-2">
                   <button
                     className="p-2 rounded-sm transition-opacity hover:opacity-70"
-                    style={{ color: 'var(--assembly-blue)' }}
+                    style={{ color: 'var(--unep-blue)' }}
                     aria-label="View"
                   >
                     <Eye size={16} />
                   </button>
                   <button
                     className="p-2 rounded-sm transition-opacity hover:opacity-70"
-                    style={{ color: 'var(--assembly-blue)' }}
+                    style={{ color: 'var(--unep-blue)' }}
                     aria-label="Download"
                   >
                     <Download size={16} />

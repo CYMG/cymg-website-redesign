@@ -41,14 +41,14 @@ export default function PoliciesSafeguarding() {
     <div className="bg-paper dark:bg-ink min-h-screen">
       {/* Hero */}
       <div className="pt-16 pb-14 px-4 sm:px-6 lg:px-8 bg-surface border-b border-line text-ink">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'About', href: '/about' }, { label: 'Policies & Safeguarding' }]} />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-semibold mt-6 "
           >
-            Safety, Trust & <span className="text-[var(--assembly-blue)]">Policies</span>
+            Safety, Trust & <span className="text-[var(--unep-blue)]">Policies</span>
           </motion.h1>
           <p className="text-lg text-[var(--ink-60)] mt-5 max-w-2xl leading-relaxed">
             This section contains the policies and governing documents of the Children and Youth Major Group to UNEP. CYMG is committed to maintaining a safe, inclusive, and respectful environment for all members and participants.
@@ -56,12 +56,12 @@ export default function PoliciesSafeguarding() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-24">
+      <div className="max-w-[1240px] mx-auto px-6 py-24">
         {/* Commitment Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 items-start">
           <div className="space-y-8">
             <div>
-              <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
+              <span className="text-[var(--unep-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
                 Our Commitment
               </span>
               <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
@@ -93,7 +93,7 @@ export default function PoliciesSafeguarding() {
                 ))}
               </ul>
               <div className="mt-8 pt-6 border-t border-line dark:border-white/5">
-                <a href="https://docs.google.com/document/d/1M2TTdt2fjrpDHrODxIsayWZ8bYGNuzFYdrh-2tq4Udg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-bold text-[var(--assembly-blue)] hover:underline">
+                <a href="https://docs.google.com/document/d/1M2TTdt2fjrpDHrODxIsayWZ8bYGNuzFYdrh-2tq4Udg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-bold text-[var(--unep-blue)] hover:underline">
                   <FileText size={18} /> Read Full Code of Conduct <ExternalLink size={14} />
                 </a>
               </div>
@@ -143,7 +143,7 @@ export default function PoliciesSafeguarding() {
                 </p>
                 <button 
                   onClick={() => setSubmitted(false)}
-                  className="mt-8 font-bold text-[var(--assembly-blue)] hover:underline"
+                  className="mt-8 font-bold text-[var(--unep-blue)] hover:underline"
                 >
                   Submit another report
                 </button>
@@ -158,7 +158,7 @@ export default function PoliciesSafeguarding() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--assembly-blue)] outline-none transition-all text-sm"
+                      className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none transition-all text-sm"
                       placeholder="Or 'Anonymous'"
                     />
                   </div>
@@ -169,7 +169,7 @@ export default function PoliciesSafeguarding() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--assembly-blue)] outline-none transition-all text-sm"
+                      className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none transition-all text-sm"
                       placeholder="For follow-up"
                     />
                   </div>
@@ -180,7 +180,7 @@ export default function PoliciesSafeguarding() {
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--assembly-blue)] outline-none appearance-none"
+                    className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none appearance-none"
                   >
                     <option value="">Select a category</option>
                     <option value="harassment">Harassment or discrimination</option>
@@ -198,7 +198,7 @@ export default function PoliciesSafeguarding() {
                     rows={6}
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--assembly-blue)] outline-none transition-all text-sm resize-none"
+                    className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none transition-all text-sm resize-none"
                     placeholder="Provide as much detail as possible (dates, people involved, context)..."
                   />
                 </div>

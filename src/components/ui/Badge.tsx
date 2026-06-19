@@ -6,7 +6,7 @@ interface BadgeProps {
   className?: string;
 }
 
-export default function Badge({ children, color = 'var(--assembly-blue)', className }: BadgeProps) {
+export default function Badge({ children, color = 'var(--unep-blue)', className }: BadgeProps) {
   return (
     <span
       className={cn(

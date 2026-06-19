@@ -12,13 +12,19 @@ import {
 } from '@/components/ui/sheet';
 
 const navItems = [
-  { label: 'About', href: '/about' },
+  { label: 'Who we are', href: '/about' },
   { label: 'Working Groups', href: '/working-groups' },
   { label: 'UNEA', href: '/unea-and-core-processes' },
+  { label: 'Regions', href: '/regions' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Team', href: '/team' },
   { label: 'Join', href: '/join' },
   { label: 'Contact', href: '/contact' },
+];
+
+const utilityNav = [
+  { label: 'News & Stories', href: '/blog' },
+  { label: 'Events', href: '/calendar' },
+  { label: 'Documents', href: '/documents' },
 ];
 
 export default function Header() {
@@ -30,13 +36,34 @@ export default function Header() {
     location.pathname === href || (href !== '/' && location.pathname.startsWith(href + '/'));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-paper">
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--assembly-blue)]">
+    <header className="sticky top-0 z-50 bg-paper border-b border-line">
+      {/* Top utility bar */}
+      <div className="bg-[var(--unep-green-dark)] text-white text-xs">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 h-8 flex items-center justify-between">
+          <span className="hidden sm:inline font-light italic opacity-90">
+            Save the planet. Opt not to print.
+          </span>
+          <nav className="flex items-center gap-4 ml-auto" aria-label="Utility navigation">
+            {utilityNav.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="hover:underline font-light"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
+
+      {/* Main header */}
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <Link to="/" className="shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--unep-blue)]">
           <img
             src="/cymg-logo-refined.svg"
             alt="CYMG — Children and Youth Major Group"
-            className="h-9 w-auto"
+            className="h-10 w-auto"
           />
         </Link>
 
@@ -46,9 +73,9 @@ export default function Header() {
               key={item.href}
               to={item.href}
               className={cn(
-                'text-sm px-3 py-2 transition-colors hover:text-[var(--assembly-blue)]',
+                'text-sm px-3 py-2 transition-colors hover:text-[var(--unep-blue)]',
                 isActive(item.href)
-                  ? 'text-[var(--assembly-blue)] font-medium'
+                  ? 'text-[var(--unep-blue)] font-medium'
                   : 'text-ink'
               )}
             >
@@ -60,7 +87,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <button
             onClick={toggle}
-            className="p-2 text-ink hover:text-[var(--assembly-blue)] transition-colors"
+            className="p-2 text-ink hover:text-[var(--unep-blue)] transition-colors"
             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
@@ -69,7 +96,7 @@ export default function Header() {
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
               <button
-                className="lg:hidden p-2 text-ink hover:text-[var(--assembly-blue)] transition-colors"
+                className="lg:hidden p-2 text-ink hover:text-[var(--unep-blue)] transition-colors"
                 aria-label="Open navigation menu"
               >
                 <Menu size={20} />
@@ -96,32 +123,15 @@ export default function Header() {
                     to={item.href}
                     onClick={() => setMobileOpen(false)}
                     className={cn(
-                      'px-4 py-3 text-sm transition-colors hover:text-[var(--assembly-blue)]',
+                      'px-4 py-3 text-sm transition-colors hover:text-[var(--unep-blue)]',
                       isActive(item.href)
-                        ? 'text-[var(--assembly-blue)] font-medium'
+                        ? 'text-[var(--unep-blue)] font-medium'
                         : 'text-ink'
                     )}
                   >
                     {item.label}
                   </Link>
                 ))}
-
-                <div className="my-3 border-t border-line" />
-
-                <Link
-                  to="/calendar"
-                  onClick={() => setMobileOpen(false)}
-                  className="px-4 py-2.5 text-sm text-[var(--ink-60)] hover:text-ink transition-colors"
-                >
-                  Calendar
-                </Link>
-                <Link
-                  to="/documents"
-                  onClick={() => setMobileOpen(false)}
-                  className="px-4 py-2.5 text-sm text-[var(--ink-60)] hover:text-ink transition-colors"
-                >
-                  Documents
-                </Link>
               </nav>
             </SheetContent>
           </Sheet>

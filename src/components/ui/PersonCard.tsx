@@ -83,7 +83,7 @@ export default function PersonCard({
           <a
             href={`mailto:${email}`}
             className="inline-flex items-center gap-1.5 text-sm mt-1 transition-opacity hover:opacity-70"
-            style={{ color: 'var(--assembly-blue)' }}
+            style={{ color: 'var(--unep-blue)' }}
           >
             <Mail size={14} />
             {email}

@@ -102,7 +102,7 @@ export default function BlogPost() {
                 <ul key={i} className="flex flex-col gap-2 my-4">
                   {items.map((item, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--ink)' }}>
-                      <div className="w-1.5 h-1.5 rounded-sm mt-1.5 flex-shrink-0" style={{ backgroundColor: 'var(--assembly-blue)' }} />
+                      <div className="w-1.5 h-1.5 rounded-sm mt-1.5 flex-shrink-0" style={{ backgroundColor: 'var(--unep-blue)' }} />
                       {item.replace(/^[-\d.]+\s*/, '')}
                     </li>
                   ))}

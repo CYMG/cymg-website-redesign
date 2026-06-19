@@ -30,14 +30,14 @@ export default function WorkingGroupsHub() {
     <div className="bg-paper dark:bg-ink min-h-screen">
       {/* Hero */}
       <div className="pt-16 pb-14 px-4 sm:px-6 lg:px-8 bg-surface border-b border-line text-ink">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'Thematic Working Groups' }]} />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-semibold mt-6 "
           >
-            Thematic <span className="text-[var(--assembly-blue)]">Working Groups</span>
+            Thematic <span className="text-[var(--unep-blue)]">Working Groups</span>
           </motion.h1>
           <p className="text-lg text-[var(--ink-60)] mt-5 max-w-3xl leading-relaxed">
             Thirteen specialized groups coordinating global youth voices across every major environmental priority.
@@ -45,7 +45,7 @@ export default function WorkingGroupsHub() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-[1240px] mx-auto px-6 py-16">
         {/* Filter */}
         <div className="flex flex-wrap gap-2 mb-12 bg-white dark:bg-slate-900 p-4 rounded-sm border border-line dark:border-white/5">
           {clusterFilters.map((f) => (
@@ -54,8 +54,8 @@ export default function WorkingGroupsHub() {
               onClick={() => setActiveFilter(f.value)}
               className={`px-6 py-2.5 rounded-sm text-xs font-semibold uppercase tracking-widest transition-all ${
                 activeFilter === f.value
-                  ? 'bg-[var(--assembly-blue)] text-white'
-                  : 'bg-transparent text-slate-500 hover:text-[var(--assembly-blue)]'
+                  ? 'bg-[var(--unep-blue)] text-white'
+                  : 'bg-transparent text-slate-500 hover:text-[var(--unep-blue)]'
               }`}
             >
               {f.label}
@@ -81,13 +81,13 @@ export default function WorkingGroupsHub() {
                 <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border-none font-semibold text-[10px] tracking-widest mb-4">
                   {clusterColors[wg.cluster].label}
                 </Badge>
-                <h3 className="text-2xl font-semibold text-ink dark:text-paper mb-4 leading-tight group-hover:text-[var(--assembly-blue)] transition-colors">
+                <h3 className="text-2xl font-semibold text-ink dark:text-paper mb-4 leading-tight group-hover:text-[var(--unep-blue)] transition-colors">
                   {wg.name}
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-8 flex-1">
                   {wg.description}
                 </p>
-                <div className="flex items-center gap-2 text-sm font-semibold text-[var(--assembly-blue)] uppercase tracking-widest">
+                <div className="flex items-center gap-2 text-sm font-semibold text-[var(--unep-blue)] uppercase tracking-widest">
                   View Detail <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
                 </div>
               </Link>

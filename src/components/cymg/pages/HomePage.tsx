@@ -205,7 +205,7 @@ function MissionSection() {
 
   return (
     <section className="bg-paper dark:bg-ink py-10 sm:py-14 md:py-20 border-b border-line dark:border-white/10">
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-8 md:gap-12">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-8 md:gap-12">
         {/* Small CYMG logo — left */}
         <motion.div
           initial={reducedMotion ? {} : { opacity: 0, x: -16 }}
@@ -264,7 +264,7 @@ function StatsBar() {
     <section
       className="bg-cymg-green dark:bg-cymg-green-dark text-white"
     >
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
           {stats.map((stat, i) => (
             <motion.div
@@ -344,7 +344,7 @@ function BentoGrid() {
 
   return (
     <section className="bg-paper dark:bg-ink py-12 sm:py-16 md:py-20 lg:py-28">
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <motion.div
           initial={reducedMotion ? {} : { opacity: 0, y: 14 }}
@@ -464,7 +464,7 @@ function StoriesInsights() {
 
   return (
     <section className="bg-surface dark:bg-[#0B1220] py-12 sm:py-16 md:py-20 lg:py-28">
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={reducedMotion ? {} : { opacity: 0, y: 14 }}
@@ -602,7 +602,7 @@ function GetInvolvedCTA() {
 
   return (
     <section className="bg-cymg-green dark:bg-cymg-green-dark py-12 sm:py-14 md:py-18 lg:py-22">
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={reducedMotion ? {} : { opacity: 0, y: 18 }}
           whileInView={reducedMotion ? {} : { opacity: 1, y: 0 }}

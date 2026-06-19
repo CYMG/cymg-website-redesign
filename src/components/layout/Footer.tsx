@@ -42,7 +42,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="w-full bg-surface border-t border-line">
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-5">
@@ -62,7 +62,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-[var(--ink-60)] hover:text-[var(--assembly-blue)] transition-colors"
+                  className="p-2 text-[var(--ink-60)] hover:text-[var(--unep-blue)] transition-colors"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -81,7 +81,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       to={link.href}
-                      className="text-sm text-ink hover:text-[var(--assembly-blue)] transition-colors"
+                      className="text-sm text-ink hover:text-[var(--unep-blue)] transition-colors"
                     >
                       {link.label}
                     </Link>

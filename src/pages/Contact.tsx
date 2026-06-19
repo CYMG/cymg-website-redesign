@@ -22,8 +22,8 @@ export default function Contact() {
 
   return (
     <div style={{ backgroundColor: 'var(--paper)' }}>
-      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--assembly-blue)' }}>
-        <div className="max-w-[1320px] mx-auto">
+      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--unep-blue)' }}>
+        <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'Contact' }]} />
           <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
             Contact Us
@@ -31,7 +31,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="max-w-[1320px] mx-auto px-6 py-16 md:py-24">
+      <div className="max-w-[1240px] mx-auto px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form */}
           <div>
@@ -43,7 +43,7 @@ export default function Contact() {
                 className="rounded-sm p-8 text-center"
                 style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
               >
-                <Send size={32} className="mx-auto mb-4" style={{ color: 'var(--canopy-green)' }} />
+                <Send size={32} className="mx-auto mb-4" style={{ color: 'var(--unep-green)' }} />
                 <p className="text-body-lg" style={{ color: 'var(--ink)' }}>
                   Message sent! We will get back to you soon.
                 </p>
@@ -109,7 +109,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   className="btn-pill self-start"
-                  style={{ backgroundColor: 'var(--assembly-blue)', color: 'var(--paper)' }}
+                  style={{ backgroundColor: 'var(--unep-blue)', color: 'var(--paper)' }}
                 >
                   Send Message
                 </button>
@@ -136,7 +136,7 @@ export default function Contact() {
                   <contact.icon
                     size={20}
                     className="flex-shrink-0 mt-0.5"
-                    style={{ color: contact.isSensitive ? 'var(--clay)' : 'var(--assembly-blue)' }}
+                    style={{ color: contact.isSensitive ? 'var(--unep-green-deep)' : 'var(--unep-blue)' }}
                   />
                   <div>
                     <p className="font-display font-medium mb-1" style={{ color: 'var(--ink)' }}>
@@ -145,12 +145,12 @@ export default function Contact() {
                     <a
                       href={`mailto:${contact.email}`}
                       className="text-sm"
-                      style={{ color: 'var(--assembly-blue)' }}
+                      style={{ color: 'var(--unep-blue)' }}
                     >
                       {contact.email}
                     </a>
                     {contact.isSensitive && (
-                      <p className="text-xs mt-1" style={{ color: 'var(--clay)' }}>
+                      <p className="text-xs mt-1" style={{ color: 'var(--unep-green-deep)' }}>
                         This is a confidential channel for safeguarding reports.
                       </p>
                     )}
@@ -164,7 +164,7 @@ export default function Contact() {
               style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
             >
               <div className="flex items-center gap-2 mb-4">
-                <MapPin size={18} style={{ color: 'var(--canopy-green)' }} />
+                <MapPin size={18} style={{ color: 'var(--unep-green)' }} />
                 <h3 className="font-display font-medium" style={{ color: 'var(--ink)' }}>
                   Global Presence
                 </h3>

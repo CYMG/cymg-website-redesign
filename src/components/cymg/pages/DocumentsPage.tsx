@@ -21,7 +21,7 @@ export default function DocumentsPage() {
           aria-hidden="true"
         />
 
-        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={reducedMotion ? {} : { opacity: 0, y: 20 }}
             animate={reducedMotion ? {} : { opacity: 1, y: 0 }}

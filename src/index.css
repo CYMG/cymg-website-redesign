@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..600;1,400..600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    --ink: #1a1a1a;
+    --ink: #1e1e1e;
     --paper: #ffffff;
-    --surface: #f7f7f6;
-    --line: #e5e5e3;
-    --assembly-blue: #1e4d32;
-    --assembly-blue-deep: #163b26;
-    --canopy-green: #2d5a3d;
-    --signal-lime: #4a7c59;
-    --clay: #8b5a2b;
-    --ink-60: rgba(26, 26, 26, 0.6);
+    --surface: #f5f5f5;
+    --line: #e0e0e0;
+    --unep-blue: #00abf1;
+    --unep-blue-deep: #0083b3;
+    --unep-green: #4c9f38;
+    --unep-green-deep: #3a782a;
+    --unep-green-dark: #01724c;
+    --ink-60: rgba(30, 30, 30, 0.6);
 
-    --font-display: 'Inter', system-ui, sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
+    --font-display: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
 
     --ease-default: cubic-bezier(0.16, 1, 0.3, 1);
 
     --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --foreground: 0 0% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 0 0% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
-    --primary: 145 45% 21%;
+    --popover-foreground: 0 0% 12%;
+    --primary: 196 100% 47%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 97%;
-    --secondary-foreground: 0 0% 10%;
-    --muted: 0 0% 97%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 12%;
+    --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
-    --accent: 0 0% 97%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 12%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 145 45% 21%;
-    --radius: 0.375rem;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 196 100% 47%;
+    --radius: 0;
   }
 
   [data-theme="dark"] {
@@ -50,11 +50,11 @@
     --paper: #121212;
     --surface: #1a1a1a;
     --line: #2a2a2a;
-    --assembly-blue: #6b9e7c;
-    --assembly-blue-deep: #5a8a6a;
-    --canopy-green: #7fb38e;
-    --signal-lime: #8fc79e;
-    --clay: #c49a6c;
+    --unep-blue: #33bfff;
+    --unep-blue-deep: #0095d1;
+    --unep-green: #6db85a;
+    --unep-green-deep: #4c9f38;
+    --unep-green-dark: #1a9364;
     --ink-60: rgba(242, 242, 242, 0.6);
 
     --background: 0 0% 7%;
@@ -63,7 +63,7 @@
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 95%;
-    --primary: 145 30% 55%;
+    --primary: 196 100% 60%;
     --primary-foreground: 0 0% 7%;
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 95%;
@@ -75,7 +75,7 @@
     --destructive-foreground: 0 0% 95%;
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 145 30% 55%;
+    --ring: 196 100% 60%;
   }
 
   * {
@@ -97,7 +97,7 @@
   }
 
   ::selection {
-    background-color: var(--assembly-blue);
+    background-color: var(--unep-blue);
     color: var(--paper);
   }
 }
@@ -182,7 +182,7 @@
   }
 
   .btn-pill:focus-visible {
-    outline: 2px solid var(--assembly-blue);
+    outline: 2px solid var(--unep-blue);
     outline-offset: 2px;
   }
 
@@ -191,7 +191,7 @@
     top: -40px;
     left: 0;
     padding: 8px 16px;
-    background: var(--assembly-blue);
+    background: var(--unep-blue);
     color: var(--paper);
     font-family: var(--font-mono);
     font-size: 0.75rem;

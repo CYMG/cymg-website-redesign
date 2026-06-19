@@ -51,7 +51,7 @@ export default function Join() {
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
             Your application has been received. Our coordination team will review your details and reach out within 5 business days with onboarding materials.
           </p>
-          <a href="/" className="btn-pill bg-[var(--assembly-blue)] text-white px-8 py-3.5 font-bold hover:bg-[var(--assembly-blue-deep)] transition-all">
+          <a href="/" className="btn-pill bg-[var(--unep-blue)] text-white px-8 py-3.5 font-bold hover:bg-[var(--unep-blue-deep)] transition-all">
             Return Home
           </a>
         </motion.div>
@@ -85,7 +85,7 @@ export default function Join() {
             <div key={s} className="flex items-center gap-4 flex-1">
               <div
                 className={`w-12 h-12 rounded-sm flex items-center justify-center text-lg font-semibold transition-all duration-300 ${
-                  step >= s ? 'bg-[var(--assembly-blue)] text-white rotate-12' : 'bg-white dark:bg-slate-800 text-slate-300 border border-line dark:border-white/10'
+                  step >= s ? 'bg-[var(--unep-blue)] text-white rotate-12' : 'bg-white dark:bg-slate-800 text-slate-300 border border-line dark:border-white/10'
                 }`}
               >
                 {step > s ? <Check size={20} /> : s}
@@ -95,7 +95,7 @@ export default function Join() {
                   <motion.div 
                     initial={{ width: '0%' }}
                     animate={{ width: step > s ? '100%' : '0%' }}
-                    className="h-full bg-[var(--assembly-blue)] rounded-sm"
+                    className="h-full bg-[var(--unep-blue)] rounded-sm"
                   />
                 </div>
               )}
@@ -115,7 +115,7 @@ export default function Join() {
                   className="space-y-8"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <Rocket className="text-[var(--assembly-blue)]" />
+                    <Rocket className="text-[var(--unep-blue)]" />
                     <h2 className="text-3xl font-semibold text-ink dark:text-paper ">Your Essentials</h2>
                   </div>
                   
@@ -127,7 +127,7 @@ export default function Join() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--assembly-blue)] outline-none transition-all"
+                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none transition-all"
                         placeholder="e.g. Jane Doe"
                       />
                     </div>
@@ -138,7 +138,7 @@ export default function Join() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--assembly-blue)] outline-none transition-all"
+                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none transition-all"
                         placeholder="jane@example.com"
                       />
                     </div>
@@ -148,7 +148,7 @@ export default function Join() {
                         type="text"
                         value={formData.organization}
                         onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--assembly-blue)] outline-none transition-all"
+                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none transition-all"
                         placeholder="Organization name or 'Individual'"
                       />
                     </div>
@@ -159,7 +159,7 @@ export default function Join() {
                         required
                         value={formData.country}
                         onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--assembly-blue)] outline-none transition-all"
+                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none transition-all"
                       />
                     </div>
                   </div>
@@ -169,7 +169,7 @@ export default function Join() {
                       type="checkbox"
                       checked={formData.ageVerified}
                       onChange={(e) => setFormData({ ...formData, ageVerified: e.target.checked })}
-                      className="w-6 h-6 rounded-lg border-2 border-[var(--assembly-blue)] text-[var(--assembly-blue)] focus:ring-offset-0"
+                      className="w-6 h-6 rounded-lg border-2 border-[var(--unep-blue)] text-[var(--unep-blue)] focus:ring-offset-0"
                     />
                     <span className="text-sm font-bold text-blue-900 dark:text-blue-300 leading-tight">
                       I confirm I am between 15 and 35 years old (the formal youth age range for UN environmental processes).
@@ -187,7 +187,7 @@ export default function Join() {
                   className="space-y-10"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <Target className="text-[var(--assembly-blue)]" />
+                    <Target className="text-[var(--unep-blue)]" />
                     <h2 className="text-3xl font-semibold text-ink dark:text-paper ">Focus Areas</h2>
                   </div>
 
@@ -208,8 +208,8 @@ export default function Join() {
                             }}
                             className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all border ${
                               selected 
-                                ? 'bg-[var(--assembly-blue)] border-[var(--assembly-blue)] text-white' 
-                                : 'bg-slate-50 dark:bg-slate-800 border-line dark:border-white/5 text-slate-600 dark:text-slate-400 hover:border-[var(--assembly-blue)]'
+                                ? 'bg-[var(--unep-blue)] border-[var(--unep-blue)] text-white' 
+                                : 'bg-slate-50 dark:bg-slate-800 border-line dark:border-white/5 text-slate-600 dark:text-slate-400 hover:border-[var(--unep-blue)]'
                             }`}
                           >
                             {wg.name}
@@ -258,7 +258,7 @@ export default function Join() {
                   className="space-y-10"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <Shield className="text-[var(--assembly-blue)]" />
+                    <Shield className="text-[var(--unep-blue)]" />
                     <h2 className="text-3xl font-semibold text-ink dark:text-paper ">Final Confirmation</h2>
                   </div>
 
@@ -314,7 +314,7 @@ export default function Join() {
                   type="button"
                   onClick={() => setStep(step + 1)}
                   disabled={!canProceed()}
-                  className="btn-pill bg-[var(--assembly-blue)] text-white px-10 py-4 font-semibold hover:scale-105 active:scale-95 disabled:opacity-30 disabled:grayscale transition-all"
+                  className="btn-pill bg-[var(--unep-blue)] text-white px-10 py-4 font-semibold hover:scale-105 active:scale-95 disabled:opacity-30 disabled:grayscale transition-all"
                 >
                   Continue <ChevronRight size={20} />
                 </button>
@@ -322,7 +322,7 @@ export default function Join() {
                 <button
                   type="submit"
                   disabled={!canProceed()}
-                  className="btn-pill bg-[var(--signal-lime)] text-[#0A1128] px-12 py-4 font-semibold hover:scale-105 active:scale-95 disabled:opacity-30 transition-all"
+                  className="btn-pill bg-[var(--unep-green)] text-[#0A1128] px-12 py-4 font-semibold hover:scale-105 active:scale-95 disabled:opacity-30 transition-all"
                 >
                   Submit Application
                 </button>
@@ -332,7 +332,7 @@ export default function Join() {
         </div>
 
         <div className="mt-12 text-center text-slate-500 text-sm font-medium flex items-center justify-center gap-2">
-          <HelpCircle size={16} /> Need help with your application? <a href="/contact" className="text-[var(--assembly-blue)] font-bold hover:underline">Contact our coordination team</a>
+          <HelpCircle size={16} /> Need help with your application? <a href="/contact" className="text-[var(--unep-blue)] font-bold hover:underline">Contact our coordination team</a>
         </div>
       </div>
     </div>

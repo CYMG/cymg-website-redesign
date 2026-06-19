@@ -17,7 +17,7 @@ export default function WorkingGroupDetail() {
     <div style={{ backgroundColor: 'var(--paper)' }}>
       {/* Hero */}
       <div className="pt-24 pb-16 px-6" style={{ backgroundColor: cluster.color }}>
-        <div className="max-w-[1320px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[
             { label: 'Working Groups', href: '/working-groups' },
             { label: wg.name },
@@ -36,7 +36,7 @@ export default function WorkingGroupDetail() {
         </div>
       </div>
 
-      <div className="max-w-[1320px] mx-auto px-6 py-16 md:py-24">
+      <div className="max-w-[1240px] mx-auto px-6 py-16 md:py-24">
         {/* Mission */}
         <div className="mb-16">
           <h2 className="text-h2 font-display mb-4" style={{ color: 'var(--ink)' }}>
@@ -118,7 +118,7 @@ export default function WorkingGroupDetail() {
                 <a
                   href={`mailto:${fp.email}`}
                   className="inline-flex items-center gap-2 text-sm"
-                  style={{ color: 'var(--assembly-blue)' }}
+                  style={{ color: 'var(--unep-blue)' }}
                 >
                   <Mail size={14} /> {fp.email}
                 </a>

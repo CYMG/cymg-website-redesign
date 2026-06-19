@@ -81,7 +81,7 @@ function ResourceLink({
         p-5 transition-colors duration-200
         hover:border-assembly-blue dark:hover:border-assembly-blue
         focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-assembly-blue
-      "
+    "
     >
       <span className="shrink-0 w-10 h-10 rounded-full bg-assembly-blue/10 dark:bg-assembly-blue/20 flex items-center justify-center">
         <Icon className="w-4.5 h-4.5 text-assembly-blue dark:text-assembly-blue" aria-hidden="true" />

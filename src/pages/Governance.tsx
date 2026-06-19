@@ -8,49 +8,49 @@ const structure = [
     id: "assembly",
     label: "Assembly",
     description:
-      "The Assembly constitutes the entirety of CYMG. It consists of all members (entities and individuals) and all structures, and serves as the primary avenue for decision-making within the constituency.",
+    "The Assembly constitutes the entirety of CYMG. It consists of all members (entities and individuals) and all structures, and serves as the primary avenue for decision-making within the constituency.",
     level: 0,
   },
   {
     id: "committee-accredited",
     label: "Committee of Accredited Organisations (CAO)",
     description:
-      "Composed of representatives from organisations accredited to UNEP and UNEP-administered MEAs and frameworks. It serves as the decision-making body for reviewing and guiding the administrative functions of CYMG.",
+    "Composed of representatives from organisations accredited to UNEP and UNEP-administered MEAs and frameworks. It serves as the decision-making body for reviewing and guiding the administrative functions of CYMG.",
     level: 1,
   },
   {
     id: "steering",
     label: "Global Steering Committee (GSC)",
     description:
-      "Provides strategic direction and oversight for the programmatic, policy, and substantive functions of CYMG. It comprises Global Coordinators, Focal Points of the Working Groups and Regional Groups, and representatives from other constituted, subsidiary, and affiliated organs.",
+    "Provides strategic direction and oversight for the programmatic, policy, and substantive functions of CYMG. It comprises Global Coordinators, Focal Points of the Working Groups and Regional Groups, and representatives from other constituted, subsidiary, and affiliated organs.",
     level: 2,
   },
   {
     id: "operations",
     label: "Operations Facilitation Team (OFT)",
     description:
-      "An essential support body composed of peer-selected youth members. The OFT handles general administration, social media outreach, IT support, graphic design, financial record-keeping, logistical coordination for events, and membership management — acting as the secretariat of CYMG.",
+    "An essential support body composed of peer-selected youth members. The OFT handles general administration, social media outreach, IT support, graphic design, financial record-keeping, logistical coordination for events, and membership management — acting as the secretariat of CYMG.",
     level: 3,
   },
   {
     id: "pcg",
     label: "Policy Coordination Group (PCG)",
     description:
-      "An open working group composed of Focal Points and thematic group leads, with participation open to other CYMG members working on thematic workstreams. The PCG ensures policy coherence and alignment across CYMG and contributes to the development of collective policy positions.",
+    "An open working group composed of Focal Points and thematic group leads, with participation open to other CYMG members working on thematic workstreams. The PCG ensures policy coherence and alignment across CYMG and contributes to the development of collective policy positions.",
     level: 3,
   },
   {
     id: "working-groups",
     label: "Working Groups",
     description:
-      "Subsidiary organs that provide dedicated space for members to collaborate on specific topics aligned with CYMG’s engagement avenues. Thematic Focal Points coordinate 13 working groups covering pollution and chemicals, nature and ecosystems, and policy, governance, and finance.",
+    "Subsidiary organs that provide dedicated space for members to collaborate on specific topics aligned with CYMG’s engagement avenues. Thematic Focal Points coordinate 13 working groups covering pollution and chemicals, nature and ecosystems, and policy, governance, and finance.",
     level: 4,
   },
   {
     id: "regional-groups",
     label: "Regional Groups",
     description:
-      "Established to provide a platform for members to engage on environmental issues specific to their geographic regions. These groups foster regional collaboration, facilitate cross-regional exchange, and ensure diverse voices within CYMG are represented and heard.",
+    "Established to provide a platform for members to engage on environmental issues specific to their geographic regions. These groups foster regional collaboration, facilitate cross-regional exchange, and ensure diverse voices within CYMG are represented and heard.",
     level: 4,
   },
 ];
@@ -60,14 +60,14 @@ export default function Governance() {
     <div className="bg-paper dark:bg-ink min-h-screen">
       {/* Hero */}
       <div className="pt-16 pb-14 px-4 sm:px-6 lg:px-8 bg-surface border-b border-line text-ink">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'About', href: '/about' }, { label: 'Governance' }]} />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-semibold mt-6 "
           >
-            Institutional <span className="text-[var(--assembly-blue)]">Framework</span>
+            Institutional <span className="text-[var(--unep-blue)]">Framework</span>
           </motion.h1>
           <p className="text-lg text-[var(--ink-60)] mt-5 max-w-2xl leading-relaxed">
             A multi-layered structure designed to connect grassroots youth environmental action to the highest levels of global environmental governance.
@@ -75,10 +75,10 @@ export default function Governance() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-24">
+      <div className="max-w-[1240px] mx-auto px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
           <div className="lg:col-span-4">
-            <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
+            <span className="text-[var(--unep-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
               Governance Model
             </span>
             <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
@@ -95,7 +95,7 @@ export default function Governance() {
                 'Regional and thematic representation',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3 text-sm font-bold text-ink dark:text-paper">
-                  <CheckCircle2 size={18} className="text-[var(--assembly-blue)]" />
+                  <CheckCircle2 size={18} className="text-[var(--unep-blue)]" />
                   {item}
                 </div>
               ))}
@@ -117,11 +117,11 @@ export default function Governance() {
                   className="relative pl-0 md:pl-12"
                 >
                   {/* Dot on line */}
-                  <div className="absolute left-[21px] top-8 w-2.5 h-2.5 rounded-sm bg-[var(--assembly-blue)] border-4 border-paper dark:border-ink z-10 hidden md:block" />
+                  <div className="absolute left-[21px] top-8 w-2.5 h-2.5 rounded-sm bg-[var(--unep-blue)] border-4 border-paper dark:border-ink z-10 hidden md:block" />
                   
                   <div className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-sm border border-line dark:border-white/5 shadow-sm hover: transition-all group">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
-                      <h3 className="text-xl font-semibold text-ink dark:text-paper  group-hover:text-[var(--assembly-blue)] transition-colors">
+                      <h3 className="text-xl font-semibold text-ink dark:text-paper  group-hover:text-[var(--unep-blue)] transition-colors">
                         {node.label}
                       </h3>
                       <span className="text-[10px] font-semibold uppercase tracking-widest px-3 py-1 bg-slate-100 dark:bg-white/5 text-slate-500 rounded-sm w-fit">
@@ -142,7 +142,7 @@ export default function Governance() {
         <div className="bg-surface rounded-sm p-12 md:p-16 text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-semibold mb-6 ">
-              Accountability & <span className="text-[var(--assembly-blue)]">Transparency</span>
+              Accountability & <span className="text-[var(--unep-blue)]">Transparency</span>
             </h2>
             <p className="text-lg text-slate-400 mb-10 leading-relaxed">
               Our annual reports, financial statements, and meeting minutes are public records. We believe that global governance must start with local accountability.
@@ -150,7 +150,7 @@ export default function Governance() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/documents"
-                className="btn-pill bg-[var(--assembly-blue)] text-white px-10 py-4 font-bold hover:bg-[var(--assembly-blue-deep)] transition-all w-full sm:w-auto"
+                className="btn-pill bg-[var(--unep-blue)] text-white px-10 py-4 font-bold hover:bg-[var(--unep-blue-deep)] transition-all w-full sm:w-auto"
               >
                 Browse Public Documents
               </Link>

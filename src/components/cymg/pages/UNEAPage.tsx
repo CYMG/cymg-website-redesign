@@ -21,7 +21,7 @@ export default function UNEAPage() {
           aria-hidden="true"
         />
 
-        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={reducedMotion ? {} : { opacity: 0, y: 20 }}
             animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export default function UNEAPage() {
 
       {/* ── YEA 2025 Featured Image Card ───────────────────────────── */}
       <section className="bg-paper dark:bg-ink py-0">
-        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 -mt-2 mb-8 sm:mb-12 md:mb-16">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 -mt-2 mb-8 sm:mb-12 md:mb-16">
           <motion.div
             initial={reducedMotion ? {} : { opacity: 0, y: 24 }}
             whileInView={reducedMotion ? {} : { opacity: 1, y: 0 }}

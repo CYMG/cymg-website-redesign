@@ -119,7 +119,7 @@ export default function UNEASection() {
       id="unea"
       className="bg-paper dark:bg-ink py-20 md:py-28 px-6"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1240px] mx-auto">
         {/* Header */}
         <div className="mb-14">
           <h2

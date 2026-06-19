@@ -73,7 +73,7 @@ export default function Card({
             {tag && <Badge color={tagColor} className="border-none font-black text-[10px] tracking-widest uppercase">{tag}</Badge>}
             {date && (
               <span className={cn(
-                "text-[10px] font-black uppercase tracking-widest",
+              "text-[10px] font-black uppercase tracking-widest",
                 imagePosition === 'background' ? 'text-slate-400' : 'text-slate-500'
               )}>
                 {date}
@@ -83,7 +83,7 @@ export default function Card({
         )}
         <h3
           className={cn(
-            "text-xl font-black leading-tight tracking-tight group-hover:text-[var(--assembly-blue)] transition-colors",
+          "text-xl font-black leading-tight tracking-tight group-hover:text-[var(--unep-blue)] transition-colors",
             imagePosition === 'background' ? 'text-white' : 'text-ink dark:text-paper'
           )}
         >
@@ -92,7 +92,7 @@ export default function Card({
         {description && (
           <p
             className={cn(
-              "text-sm leading-relaxed line-clamp-3 font-medium",
+            "text-sm leading-relaxed line-clamp-3 font-medium",
               imagePosition === 'background' ? 'text-slate-300' : 'text-slate-600 dark:text-slate-400'
             )}
           >

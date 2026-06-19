@@ -6,7 +6,7 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <nav aria-label="Breadcrumb" className="max-w-[1320px] mx-auto px-6 py-4">
+    <nav aria-label="Breadcrumb" className="max-w-[1240px] mx-auto px-6 py-4">
       <ol className="flex items-center gap-2 flex-wrap">
         <li>
           <Link

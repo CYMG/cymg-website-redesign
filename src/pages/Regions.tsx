@@ -16,14 +16,14 @@ export default function Regions() {
     <div className="bg-paper dark:bg-ink min-h-screen">
       {/* Hero */}
       <div className="pt-16 pb-14 px-4 sm:px-6 lg:px-8 bg-surface border-b border-line text-ink">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'Regions' }]} />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-semibold mt-6 "
           >
-            Global <span className="text-[var(--assembly-blue)]">Regions</span>
+            Global <span className="text-[var(--unep-blue)]">Regions</span>
           </motion.h1>
           <p className="text-lg text-[var(--ink-60)] mt-5 max-w-3xl leading-relaxed">
             Organized across 6 UNEP regions plus special seats, ensuring local perspectives reach the highest levels of global environmental governance.
@@ -31,7 +31,7 @@ export default function Regions() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-24">
+      <div className="max-w-[1240px] mx-auto px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Region List */}
           <div className="lg:col-span-4">
@@ -42,8 +42,8 @@ export default function Regions() {
                   onClick={() => setSelectedRegion(region.id === selectedRegion ? null : region.id)}
                   className={`text-left rounded-sm px-6 py-5 transition-all duration-300 border ${
                     selectedRegion === region.id
-                      ? 'bg-[var(--assembly-blue)] border-[var(--assembly-blue)] text-white scale-[1.02]'
-                      : 'bg-white dark:bg-slate-900 border-line dark:border-white/5 text-ink dark:text-paper hover:border-[var(--assembly-blue)] hover:shadow-md'
+                      ? 'bg-[var(--unep-blue)] border-[var(--unep-blue)] text-white scale-[1.02]'
+                      : 'bg-white dark:bg-slate-900 border-line dark:border-white/5 text-ink dark:text-paper hover:border-[var(--unep-blue)] hover:shadow-md'
                   }`}
                 >
                   <div className="flex items-center justify-between">
@@ -104,7 +104,7 @@ export default function Regions() {
                       {facilitator && !facilitator.isVacant ? (
                         <div className="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-sm border border-line dark:border-white/5">
                           <div className="flex items-center gap-4 mb-4">
-                            <div className="w-16 h-16 rounded-sm bg-[var(--assembly-blue)] flex items-center justify-center text-white text-2xl font-semibold">
+                            <div className="w-16 h-16 rounded-sm bg-[var(--unep-blue)] flex items-center justify-center text-white text-2xl font-semibold">
                               {facilitator.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}
                             </div>
                             <div>
@@ -118,7 +118,7 @@ export default function Regions() {
                           </div>
                           <a
                             href={`mailto:${facilitator.email}`}
-                            className="btn-pill w-full bg-white dark:bg-slate-900 border border-line dark:border-white/5 justify-center py-2.5 hover:bg-[var(--assembly-blue)] hover:text-white transition-all text-sm font-bold"
+                            className="btn-pill w-full bg-white dark:bg-slate-900 border border-line dark:border-white/5 justify-center py-2.5 hover:bg-[var(--unep-blue)] hover:text-white transition-all text-sm font-bold"
                           >
                             <Mail size={16} /> Contact Facilitator
                           </a>
@@ -126,7 +126,7 @@ export default function Regions() {
                       ) : (
                         <div className="p-8 rounded-sm border-2 border-dashed border-line dark:border-white/10 text-center">
                           <p className="text-sm text-slate-500 italic mb-4">Facilitator position currently vacant.</p>
-                          <a href="/join" className="text-sm font-semibold text-[var(--assembly-blue)] hover:underline">Apply to Volunteer</a>
+                          <a href="/join" className="text-sm font-semibold text-[var(--unep-blue)] hover:underline">Apply to Volunteer</a>
                         </div>
                       )}
                     </div>
@@ -154,7 +154,7 @@ export default function Regions() {
                         <ul className="space-y-3">
                           {activeRegion.events.map((evt) => (
                             <li key={evt.title} className="flex items-center gap-3 text-sm font-medium text-ink dark:text-paper">
-                              <Calendar size={16} className="text-[var(--assembly-blue)]" />
+                              <Calendar size={16} className="text-[var(--unep-blue)]" />
                               <span>{evt.title}</span>
                               <span className="text-[10px] font-bold text-slate-400 bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded-sm ml-auto">{evt.date}</span>
                             </li>

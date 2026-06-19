@@ -33,8 +33,8 @@ export default function Calendar() {
 
   return (
     <div style={{ backgroundColor: 'var(--paper)' }}>
-      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--canopy-green)' }}>
-        <div className="max-w-[1320px] mx-auto">
+      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--unep-green)' }}>
+        <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'Calendar' }]} />
           <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
             Calendar
@@ -42,7 +42,7 @@ export default function Calendar() {
         </div>
       </div>
 
-      <div className="max-w-[1320px] mx-auto px-6 py-16 md:py-24">
+      <div className="max-w-[1240px] mx-auto px-6 py-16 md:py-24">
         {/* Controls */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-10">
           <div className="flex items-center gap-2">
@@ -50,7 +50,7 @@ export default function Calendar() {
               onClick={() => setView('month')}
               className="flex items-center gap-2 px-4 py-2 rounded-sm text-mono-sm transition-all"
               style={{
-                backgroundColor: view === 'month' ? 'var(--assembly-blue)' : 'var(--surface)',
+                backgroundColor: view === 'month' ? 'var(--unep-blue)' : 'var(--surface)',
                 color: view === 'month' ? 'var(--paper)' : 'var(--ink)',
                 border: view === 'month' ? 'none' : '1px solid var(--line)',
               }}
@@ -61,7 +61,7 @@ export default function Calendar() {
               onClick={() => setView('list')}
               className="flex items-center gap-2 px-4 py-2 rounded-sm text-mono-sm transition-all"
               style={{
-                backgroundColor: view === 'list' ? 'var(--assembly-blue)' : 'var(--surface)',
+                backgroundColor: view === 'list' ? 'var(--unep-blue)' : 'var(--surface)',
                 color: view === 'list' ? 'var(--paper)' : 'var(--ink)',
                 border: view === 'list' ? 'none' : '1px solid var(--line)',
               }}

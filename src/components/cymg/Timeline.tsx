@@ -74,7 +74,7 @@ function ComingSoonCard({
       className="
         rounded-[20px] border-2 border-dashed border-line dark:border-white/20
         bg-surface/50 dark:bg-[#141E30]/50 p-6 md:p-8
-      "
+    "
     >
       {/* Year */}
       <span className="font-mono text-3xl md:text-4xl font-bold text-ink-60 dark:text-muted-foreground mb-3 block">
@@ -202,7 +202,7 @@ export default function Timeline() {
       id="timeline"
       className="bg-paper dark:bg-ink py-20 md:py-28 px-6"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1240px] mx-auto">
         {/* Header */}
         <div className="mb-14">
           <h2

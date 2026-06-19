@@ -20,14 +20,14 @@ export default function UneaHub() {
     <div className="bg-paper dark:bg-ink min-h-screen">
       {/* Hero */}
       <div className="pt-16 pb-14 px-4 sm:px-6 lg:px-8 bg-surface border-b border-line text-ink">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'UNEA & Core Processes' }]} />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-semibold mt-6 "
           >
-            UN Environment <span className="text-[var(--assembly-blue)]">Assembly</span>
+            UN Environment <span className="text-[var(--unep-blue)]">Assembly</span>
           </motion.h1>
           <p className="text-lg text-[var(--ink-60)] mt-5 max-w-3xl leading-relaxed">
             The world's highest-level decision-making body on the environment — and CYMG's central stage for global advocacy.
@@ -35,11 +35,11 @@ export default function UneaHub() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-24">
+      <div className="max-w-[1240px] mx-auto px-6 py-24">
         {/* UNEA & CPR Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-24">
           <div>
-            <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
+            <span className="text-[var(--unep-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
               About UNEA
             </span>
             <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
@@ -63,7 +63,7 @@ export default function UneaHub() {
           </div>
 
           <div>
-            <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
+            <span className="text-[var(--unep-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
               About CPR
             </span>
             <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
@@ -90,7 +90,7 @@ export default function UneaHub() {
           className="rounded-sm p-10 md:p-14 mb-24"
           style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
         >
-          <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
+          <span className="text-[var(--unep-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
             Youth Engagement
           </span>
           <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
@@ -126,7 +126,7 @@ export default function UneaHub() {
         <div className="mb-24">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-              <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
+              <span className="text-[var(--unep-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
                 Governance
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-ink dark:text-paper ">
@@ -147,7 +147,7 @@ export default function UneaHub() {
                 key={item}
                 className="flex items-start gap-4 bg-white dark:bg-slate-900 p-6 rounded-sm border border-line dark:border-white/5 shadow-sm"
               >
-                <CheckCircle2 className="text-[var(--assembly-blue)] shrink-0 mt-1" size={20} />
+                <CheckCircle2 className="text-[var(--unep-blue)] shrink-0 mt-1" size={20} />
                 <span className="text-slate-700 dark:text-slate-300 font-medium">{item}</span>
               </div>
             ))}
@@ -157,7 +157,7 @@ export default function UneaHub() {
         {/* Cycle Track */}
         <div className="mb-24">
           <div className="mb-12">
-            <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
+            <span className="text-[var(--unep-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
               Timeline
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-ink dark:text-paper ">
@@ -170,12 +170,12 @@ export default function UneaHub() {
                 key={node.edition}
                 className={`relative p-8 rounded-sm border-2 transition-all duration-300 ${
                   node.status === 'active'
-                    ? 'bg-white dark:bg-slate-900 border-[var(--signal-lime)] scale-105 z-10'
+                    ? 'bg-white dark:bg-slate-900 border-[var(--unep-green)] scale-105 z-10'
                     : 'bg-slate-50 dark:bg-slate-900/50 border-transparent opacity-80'
                 }`}
               >
                 {node.status === 'active' && (
-                  <span className="absolute -top-4 left-8 bg-[var(--signal-lime)] text-[#0A1128] text-xs font-semibold px-4 py-1 rounded-sm uppercase tracking-widest">
+                  <span className="absolute -top-4 left-8 bg-[var(--unep-green)] text-[#0A1128] text-xs font-semibold px-4 py-1 rounded-sm uppercase tracking-widest">
                     Current Cycle
                   </span>
                 )}

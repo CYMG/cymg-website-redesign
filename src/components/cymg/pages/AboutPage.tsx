@@ -96,7 +96,7 @@ export default function AboutPage() {
           aria-hidden="true"
         />
 
-        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={reducedMotion ? {} : { opacity: 0, y: 20 }}
             animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ export default function AboutPage() {
 
       {/* ── About Section with Brand Image ─────────────────────────── */}
       <section className="bg-paper dark:bg-ink">
-        <div className="max-w-[1320px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <div className="flex flex-col lg:flex-row">
             {/* Brand image — decorative, right side on desktop */}
             <div className="relative w-full lg:w-[340px] xl:w-[400px] shrink-0">
@@ -145,7 +145,7 @@ export default function AboutPage() {
 
       {/* ── Our Mandate Section ─────────────────────────────────────── */}
       <section className="bg-surface dark:bg-[#0B1220] py-16 sm:py-20 md:py-28">
-        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={reducedMotion ? {} : { opacity: 0, y: 20 }}
             whileInView={reducedMotion ? {} : { opacity: 1, y: 0 }}

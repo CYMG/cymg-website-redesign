@@ -85,8 +85,8 @@ const historyEntries = [
 export default function HistoryMandate() {
   return (
     <div style={{ backgroundColor: 'var(--paper)' }}>
-      <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: 'var(--assembly-blue)' }}>
-        <div className="max-w-[1320px] mx-auto">
+      <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: 'var(--unep-blue)' }}>
+        <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'About', href: '/about' }, { label: 'History & Mandate' }]} />
           <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
             History &amp; Mandate
@@ -97,7 +97,7 @@ export default function HistoryMandate() {
         </div>
       </div>
 
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <p className="text-body-lg max-w-[65ch] mb-16" style={{ color: 'var(--ink)' }}>
           CYMG&apos;s story is intertwined with the history of youth engagement in UN environmental
           processes — from the 1972 Stockholm Conference that created UNEP, through the Rio Earth Summit
@@ -116,7 +116,7 @@ export default function HistoryMandate() {
               <div className="flex-shrink-0 w-12 md:w-24 flex justify-end">
                 <div
                   className="w-3 h-3 rounded-sm mt-2 relative z-10"
-                  style={{ backgroundColor: 'var(--assembly-blue)' }}
+                  style={{ backgroundColor: 'var(--unep-blue)' }}
                 />
               </div>
 
@@ -129,7 +129,7 @@ export default function HistoryMandate() {
               >
                 <span
                   className="text-mono-label font-medium"
-                  style={{ color: 'var(--assembly-blue)' }}
+                  style={{ color: 'var(--unep-blue)' }}
                 >
                   {event.year}
                 </span>
@@ -181,7 +181,7 @@ export default function HistoryMandate() {
                 <code
                   className="font-mono text-xs px-2 py-1 rounded"
                   style={{
-                    color: 'var(--assembly-blue)',
+                    color: 'var(--unep-blue)',
                     backgroundColor: 'rgba(42,77,255,0.1)',
                   }}
                 >

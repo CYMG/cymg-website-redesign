@@ -12,11 +12,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const base = 'inline-flex items-center justify-center gap-2 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed rounded-sm';
 
     const variants = {
-      primary: 'bg-[var(--assembly-blue)] text-white hover:bg-[var(--assembly-blue-deep)]',
+      primary: 'bg-[var(--unep-blue)] text-white hover:bg-[var(--unep-blue-deep)]',
       secondary: 'bg-ink text-white hover:bg-[var(--ink-60)]',
-      ghost: 'bg-transparent text-[var(--assembly-blue)] hover:bg-surface',
-      outline: 'bg-transparent border border-line text-ink hover:border-[var(--assembly-blue)] hover:text-[var(--assembly-blue)]',
-      text: 'bg-transparent text-[var(--assembly-blue)] underline-offset-4 hover:underline px-0 py-0',
+      ghost: 'bg-transparent text-[var(--unep-blue)] hover:bg-surface',
+      outline: 'bg-transparent border border-line text-ink hover:border-[var(--unep-blue)] hover:text-[var(--unep-blue)]',
+      text: 'bg-transparent text-[var(--unep-blue)] underline-offset-4 hover:underline px-0 py-0',
     };
 
     const sizes = {

@@ -234,7 +234,7 @@ export default function GovernanceDiagram() {
 
   return (
     <section className="bg-surface dark:bg-[#0B1220] py-20 px-6 overflow-x-auto">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1240px] mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2
