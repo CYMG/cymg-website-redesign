@@ -1,55 +1,41 @@
-import { useRef } from 'react'
-import { motion, useInView, useReducedMotion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 export default function GetInvolved() {
-  const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
-  const reducedMotion = useReducedMotion()
-
-  const fadeUp = {
-    initial: reducedMotion ? {} : { opacity: 0, y: 20 },
-    animate: inView ? { opacity: 1, y: 0 } : {},
-    transition: { duration: 0.6, ease: 'easeOut' as const },
-  }
-
   return (
     <section
       id="get-involved"
-      className="bg-[var(--signal-lime)] py-24"
+      className="bg-surface border-t border-line"
       aria-labelledby="get-involved-heading"
     >
-      <div ref={ref} className="mx-auto max-w-7xl px-6 text-center">
-        <motion.div {...fadeUp} className="max-w-3xl mx-auto">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div className="max-w-2xl">
           <h2
             id="get-involved-heading"
-            className="text-4xl md:text-5xl font-extrabold text-[#0A1128] leading-tight tracking-tight mb-6"
+            className="text-3xl md:text-4xl font-semibold text-ink leading-[1.2] tracking-tight mb-6"
           >
-            Join thousands of young people <br className="hidden md:block" />
-            <span className="bg-[#0A1128] text-white px-2 py-1">shaping global policy.</span>
+            Get involved
           </h2>
-
-          <p className="text-lg md:text-xl text-[#0A1128]/80 mb-10 leading-relaxed font-medium">
-            Whether you represent a youth-led organization or you're an individual passionate about the planet, there is a place for you in CYMG. Membership is free and open worldwide.
+          <p className="text-lg text-[var(--ink-60)] leading-relaxed mb-8">
+            CYMG membership is open to youth-led organisations and individuals. Join a working group, connect with your region, or take part in consultations ahead of UNEA and other UN processes.
           </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <Link
               to="/join"
-              className="btn-pill bg-[#0A1128] text-white px-10 py-4 text-lg font-bold hover:bg-[#0A1128]/90 transition-all duration-300 w-full sm:w-auto shadow-xl"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-[var(--assembly-blue)] hover:bg-[var(--assembly-blue-deep)] transition-colors"
             >
-              Apply for Membership
+              Apply for membership
+              <ArrowRight size={16} />
             </Link>
             <Link
               to="/working-groups"
-              className="btn-pill border-2 border-[#0A1128] text-[#0A1128] px-10 py-4 text-lg font-bold hover:bg-[#0A1128] hover:text-white transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-ink border border-line hover:bg-white transition-colors"
             >
-              Explore Groups <ArrowRight size={20} />
+              Explore working groups
             </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
-  )
+  );
 }

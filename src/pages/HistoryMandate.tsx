@@ -115,13 +115,13 @@ export default function HistoryMandate() {
             <div key={i} className="relative flex gap-6 md:gap-12 mb-12 last:mb-0">
               <div className="flex-shrink-0 w-12 md:w-24 flex justify-end">
                 <div
-                  className="w-3 h-3 rounded-full mt-2 relative z-10"
+                  className="w-3 h-3 rounded-sm mt-2 relative z-10"
                   style={{ backgroundColor: 'var(--assembly-blue)' }}
                 />
               </div>
 
               <div
-                className="flex-1 rounded-[20px] p-6 md:p-8 transition-shadow hover:shadow-md"
+                className="flex-1 rounded-sm p-6 md:p-8 transition-shadow hover:shadow-md"
                 style={{
                   backgroundColor: 'var(--surface)',
                   border: '1px solid var(--line)',
@@ -150,7 +150,7 @@ export default function HistoryMandate() {
             Our Mandate
           </h2>
           <div
-            className="rounded-[20px] p-6 md:p-8 mb-10"
+            className="rounded-sm p-6 md:p-8 mb-10"
             style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
           >
             <p className="text-body-lg leading-relaxed mb-4" style={{ color: 'var(--ink)' }}>

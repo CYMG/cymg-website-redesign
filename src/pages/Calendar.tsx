@@ -48,7 +48,7 @@ export default function Calendar() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setView('month')}
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-mono-sm transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-sm text-mono-sm transition-all"
               style={{
                 backgroundColor: view === 'month' ? 'var(--assembly-blue)' : 'var(--surface)',
                 color: view === 'month' ? 'var(--paper)' : 'var(--ink)',
@@ -59,7 +59,7 @@ export default function Calendar() {
             </button>
             <button
               onClick={() => setView('list')}
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-mono-sm transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-sm text-mono-sm transition-all"
               style={{
                 backgroundColor: view === 'list' ? 'var(--assembly-blue)' : 'var(--surface)',
                 color: view === 'list' ? 'var(--paper)' : 'var(--ink)',
@@ -72,7 +72,7 @@ export default function Calendar() {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-4 py-2 rounded-full text-mono-sm outline-none"
+            className="px-4 py-2 rounded-sm text-mono-sm outline-none"
             style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)', color: 'var(--ink)' }}
           >
             <option value="all">All Categories</option>
@@ -88,7 +88,7 @@ export default function Calendar() {
           {Object.entries(categoryLabels).map(([key, label]) => (
             <div key={key} className="flex items-center gap-2">
               <div
-                className="w-3 h-3 rounded-full"
+                className="w-3 h-3 rounded-sm"
                 style={{ backgroundColor: categoryColors[key] }}
               />
               <span className="text-mono-sm" style={{ color: 'var(--ink-60)' }}>{label}</span>
@@ -106,11 +106,11 @@ export default function Calendar() {
               return (
                 <div
                   key={event.id}
-                  className="rounded-[20px] p-6 flex items-start gap-5"
+                  className="rounded-sm p-6 flex items-start gap-5"
                   style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
                 >
                   <div
-                    className="flex-shrink-0 w-16 h-16 rounded-2xl flex flex-col items-center justify-center"
+                    className="flex-shrink-0 w-16 h-16 rounded-sm flex flex-col items-center justify-center"
                     style={{ backgroundColor: categoryColors[event.category] + '15' }}
                   >
                     <span
@@ -129,7 +129,7 @@ export default function Calendar() {
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
                       <span
-                        className="text-mono-sm px-2 py-0.5 rounded-full"
+                        className="text-mono-sm px-2 py-0.5 rounded-sm"
                         style={{
                           backgroundColor: categoryColors[event.category] + '18',
                           color: categoryColors[event.category],
@@ -163,7 +163,7 @@ export default function Calendar() {
         {/* Month View - Simplified */}
         {view === 'month' && (
           <div
-            className="rounded-[20px] p-8"
+            className="rounded-sm p-8"
             style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
           >
             <h2 className="text-h3 font-display mb-6" style={{ color: 'var(--ink)' }}>
@@ -199,7 +199,7 @@ export default function Calendar() {
                           {dayEvents.slice(0, 3).map((e) => (
                             <div
                               key={e.id}
-                              className="w-1.5 h-1.5 rounded-full"
+                              className="w-1.5 h-1.5 rounded-sm"
                               style={{ backgroundColor: categoryColors[e.category] }}
                             />
                           ))}

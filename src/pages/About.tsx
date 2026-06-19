@@ -17,8 +17,7 @@ export default function About() {
     <div className="min-h-screen" style={{ backgroundColor: 'var(--paper)' }}>
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section
-        className="relative pt-32 pb-20 md:pb-28 overflow-hidden"
-        style={{ backgroundColor: '#0A1128' }}
+        className="relative pt-16 pb-14 md:pb-20 bg-surface border-b border-line overflow-hidden"
       >
         <div
           className="absolute top-0 left-0 w-1.5 h-full"
@@ -33,15 +32,14 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <p
-              className="font-mono text-xs uppercase tracking-[0.15em] mb-3"
-              style={{ color: 'var(--signal-lime)' }}
+              className="font-mono text-xs uppercase tracking-[0.15em] mb-3 text-[var(--canopy-green)]"
             >
               About
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl md:text-5xl font-semibold text-ink leading-[1.15]">
               About <span style={{ color: 'var(--assembly-blue)' }}>CYMG</span>
             </h1>
-            <p className="mt-5 text-lg md:text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
+            <p className="mt-5 text-lg md:text-xl max-w-2xl leading-relaxed text-[var(--ink-60)]">
               The official UN-recognized constituency for children and youth engaging with UNEP,
               UNEA, and UNEP-administered Multilateral Environmental Agreements.
             </p>
@@ -126,14 +124,14 @@ export default function About() {
 
           <div className="lg:col-span-4">
             <div
-              className="rounded-[24px] border p-8 md:p-10 relative"
+              className="rounded-sm border p-8 md:p-10 relative"
               style={{
                 backgroundColor: 'var(--surface)',
                 borderColor: 'var(--line)',
               }}
             >
               <div
-                className="absolute -top-4 -left-4 w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold"
+                className="absolute -top-4 -left-4 w-12 h-12 rounded-sm flex items-center justify-center text-2xl font-bold"
                 style={{
                   backgroundColor: 'var(--signal-lime)',
                   color: '#0A1128',
@@ -281,13 +279,13 @@ export default function About() {
                 >
                   <div className="hidden md:block md:w-1/2" />
                   <div
-                    className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full -translate-x-1/2 mt-2"
+                    className="absolute left-4 md:left-1/2 w-3 h-3 rounded-sm -translate-x-1/2 mt-2"
                     style={{ backgroundColor: 'var(--assembly-blue)' }}
                     aria-hidden="true"
                   />
                   <div className="pl-10 md:pl-0 md:w-1/2">
                     <div
-                      className="rounded-2xl border p-6"
+                      className="rounded-sm border p-6"
                       style={{
                         backgroundColor: 'var(--surface)',
                         borderColor: 'var(--line)',

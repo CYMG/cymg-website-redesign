@@ -40,7 +40,7 @@ export default function Contact() {
             </h2>
             {submitted ? (
               <div
-                className="rounded-[20px] p-8 text-center"
+                className="rounded-sm p-8 text-center"
                 style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
               >
                 <Send size={32} className="mx-auto mb-4" style={{ color: 'var(--canopy-green)' }} />
@@ -130,7 +130,7 @@ export default function Contact() {
               ].map((contact) => (
                 <div
                   key={contact.label}
-                  className="rounded-[20px] p-6 flex items-start gap-4"
+                  className="rounded-sm p-6 flex items-start gap-4"
                   style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
                 >
                   <contact.icon
@@ -160,7 +160,7 @@ export default function Contact() {
             </div>
 
             <div
-              className="mt-8 rounded-[20px] p-6"
+              className="mt-8 rounded-sm p-6"
               style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
             >
               <div className="flex items-center gap-2 mb-4">

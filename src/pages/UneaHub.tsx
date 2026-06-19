@@ -19,17 +19,17 @@ export default function UneaHub() {
   return (
     <div className="bg-paper dark:bg-ink min-h-screen">
       {/* Hero */}
-      <div className="pt-32 pb-20 px-6 bg-[#0A1128] text-white">
+      <div className="pt-16 pb-14 px-4 sm:px-6 lg:px-8 bg-surface border-b border-line text-ink">
         <div className="max-w-7xl mx-auto">
           <Breadcrumbs items={[{ label: 'UNEA & Core Processes' }]} />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-extrabold mt-8 tracking-tight"
+            className="text-4xl md:text-5xl font-semibold mt-6 "
           >
             UN Environment <span className="text-[var(--assembly-blue)]">Assembly</span>
           </motion.h1>
-          <p className="text-xl text-slate-400 mt-6 max-w-3xl leading-relaxed">
+          <p className="text-lg text-[var(--ink-60)] mt-5 max-w-3xl leading-relaxed">
             The world's highest-level decision-making body on the environment — and CYMG's central stage for global advocacy.
           </p>
         </div>
@@ -39,10 +39,10 @@ export default function UneaHub() {
         {/* UNEA & CPR Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-24">
           <div>
-            <span className="text-[var(--assembly-blue)] font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+            <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
               About UNEA
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-ink dark:text-paper tracking-tight mb-6">
+            <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
               The world&apos;s highest-level environmental decision-making body
             </h2>
             <div className="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -63,10 +63,10 @@ export default function UneaHub() {
           </div>
 
           <div>
-            <span className="text-[var(--assembly-blue)] font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+            <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
               About CPR
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-ink dark:text-paper tracking-tight mb-6">
+            <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
               Committee of Permanent Representatives
             </h2>
             <div className="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -87,13 +87,13 @@ export default function UneaHub() {
 
         {/* Youth Engagement */}
         <div
-          className="rounded-[32px] p-10 md:p-14 mb-24"
+          className="rounded-sm p-10 md:p-14 mb-24"
           style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
         >
-          <span className="text-[var(--assembly-blue)] font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+          <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
             Youth Engagement
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-ink dark:text-paper tracking-tight mb-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
             How CYMG engages at UNEA and CPR
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -126,10 +126,10 @@ export default function UneaHub() {
         <div className="mb-24">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-              <span className="text-[var(--assembly-blue)] font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+              <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
                 Governance
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-ink dark:text-paper tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-ink dark:text-paper ">
                 What UNEA Does
               </h2>
             </div>
@@ -145,7 +145,7 @@ export default function UneaHub() {
             ].map((item) => (
               <div
                 key={item}
-                className="flex items-start gap-4 bg-white dark:bg-slate-900 p-6 rounded-2xl border border-line dark:border-white/5 shadow-sm"
+                className="flex items-start gap-4 bg-white dark:bg-slate-900 p-6 rounded-sm border border-line dark:border-white/5 shadow-sm"
               >
                 <CheckCircle2 className="text-[var(--assembly-blue)] shrink-0 mt-1" size={20} />
                 <span className="text-slate-700 dark:text-slate-300 font-medium">{item}</span>
@@ -157,10 +157,10 @@ export default function UneaHub() {
         {/* Cycle Track */}
         <div className="mb-24">
           <div className="mb-12">
-            <span className="text-[var(--assembly-blue)] font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+            <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
               Timeline
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-ink dark:text-paper tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-ink dark:text-paper ">
               The UNEA Cycle
             </h2>
           </div>
@@ -168,26 +168,26 @@ export default function UneaHub() {
             {cycleNodes.map((node) => (
               <div
                 key={node.edition}
-                className={`relative p-8 rounded-3xl border-2 transition-all duration-300 ${
+                className={`relative p-8 rounded-sm border-2 transition-all duration-300 ${
                   node.status === 'active'
-                    ? 'bg-white dark:bg-slate-900 border-[var(--signal-lime)] shadow-xl scale-105 z-10'
+                    ? 'bg-white dark:bg-slate-900 border-[var(--signal-lime)] scale-105 z-10'
                     : 'bg-slate-50 dark:bg-slate-900/50 border-transparent opacity-80'
                 }`}
               >
                 {node.status === 'active' && (
-                  <span className="absolute -top-4 left-8 bg-[var(--signal-lime)] text-[#0A1128] text-xs font-black px-4 py-1 rounded-full uppercase tracking-widest shadow-lg">
+                  <span className="absolute -top-4 left-8 bg-[var(--signal-lime)] text-[#0A1128] text-xs font-semibold px-4 py-1 rounded-sm uppercase tracking-widest">
                     Current Cycle
                   </span>
                 )}
                 <div className="text-slate-500 font-bold mb-2">{node.year}</div>
-                <h3 className="text-2xl font-black text-ink dark:text-paper mb-4">{node.edition}</h3>
+                <h3 className="text-2xl font-semibold text-ink dark:text-paper mb-4">{node.edition}</h3>
                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                   {node.outcome}
                 </p>
               </div>
             ))}
           </div>
-          <div className="mt-12 bg-blue-50 dark:bg-blue-900/20 p-6 rounded-2xl border border-blue-100 dark:border-blue-900/30 text-center">
+          <div className="mt-12 bg-blue-50 dark:bg-blue-900/20 p-6 rounded-sm border border-blue-100 dark:border-blue-900/30 text-center">
             <p className="text-blue-800 dark:text-blue-300 font-semibold">
               UNEA-7: 8 – 12 December 2025 • UNEP Headquarters, Nairobi, Kenya
             </p>
@@ -199,14 +199,14 @@ export default function UneaHub() {
           {uneaCards.map((card) => (
             <div
               key={card.title}
-              className={`p-10 rounded-[40px] flex flex-col items-start gap-6 transition-transform hover:-translate-y-1 ${card.color} ${card.textColor} shadow-2xl relative overflow-hidden group`}
+              className={`p-10 rounded-sm flex flex-col items-start gap-6 transition-transform hover:-translate-y-1 ${card.color} ${card.textColor} relative overflow-hidden group`}
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500" />
-              <div className="bg-white/20 p-4 rounded-2xl backdrop-blur-md">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-sm -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500" />
+              <div className="bg-white/20 p-4 rounded-sm ">
                 <card.icon size={32} />
               </div>
               <div>
-                <h3 className="text-2xl font-black mb-3 tracking-tight">{card.title}</h3>
+                <h3 className="text-2xl font-semibold mb-3 ">{card.title}</h3>
                 <p className="opacity-90 leading-relaxed font-medium">
                   {card.desc}
                 </p>

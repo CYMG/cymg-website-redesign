@@ -59,17 +59,17 @@ export default function Governance() {
   return (
     <div className="bg-paper dark:bg-ink min-h-screen">
       {/* Hero */}
-      <div className="pt-32 pb-20 px-6 bg-[#0A1128] text-white">
+      <div className="pt-16 pb-14 px-4 sm:px-6 lg:px-8 bg-surface border-b border-line text-ink">
         <div className="max-w-7xl mx-auto">
           <Breadcrumbs items={[{ label: 'About', href: '/about' }, { label: 'Governance' }]} />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-extrabold mt-8 tracking-tight"
+            className="text-4xl md:text-5xl font-semibold mt-6 "
           >
             Institutional <span className="text-[var(--assembly-blue)]">Framework</span>
           </motion.h1>
-          <p className="text-xl text-slate-400 mt-6 max-w-2xl leading-relaxed">
+          <p className="text-lg text-[var(--ink-60)] mt-5 max-w-2xl leading-relaxed">
             A multi-layered structure designed to connect grassroots youth environmental action to the highest levels of global environmental governance.
           </p>
         </div>
@@ -78,10 +78,10 @@ export default function Governance() {
       <div className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
           <div className="lg:col-span-4">
-            <span className="text-[var(--assembly-blue)] font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+            <span className="text-[var(--canopy-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
               Governance Model
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-ink dark:text-paper mb-6 tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
               A commitment to transparent leadership.
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
@@ -117,14 +117,14 @@ export default function Governance() {
                   className="relative pl-0 md:pl-12"
                 >
                   {/* Dot on line */}
-                  <div className="absolute left-[21px] top-8 w-2.5 h-2.5 rounded-full bg-[var(--assembly-blue)] border-4 border-paper dark:border-ink z-10 hidden md:block" />
+                  <div className="absolute left-[21px] top-8 w-2.5 h-2.5 rounded-sm bg-[var(--assembly-blue)] border-4 border-paper dark:border-ink z-10 hidden md:block" />
                   
-                  <div className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-[32px] border border-line dark:border-white/5 shadow-sm hover:shadow-xl transition-all group">
+                  <div className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-sm border border-line dark:border-white/5 shadow-sm hover: transition-all group">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
-                      <h3 className="text-xl font-black text-ink dark:text-paper tracking-tight group-hover:text-[var(--assembly-blue)] transition-colors">
+                      <h3 className="text-xl font-semibold text-ink dark:text-paper  group-hover:text-[var(--assembly-blue)] transition-colors">
                         {node.label}
                       </h3>
-                      <span className="text-[10px] font-black uppercase tracking-widest px-3 py-1 bg-slate-100 dark:bg-white/5 text-slate-500 rounded-full w-fit">
+                      <span className="text-[10px] font-semibold uppercase tracking-widest px-3 py-1 bg-slate-100 dark:bg-white/5 text-slate-500 rounded-sm w-fit">
                         Level {node.level}
                       </span>
                     </div>
@@ -139,9 +139,9 @@ export default function Governance() {
         </div>
 
         {/* Accountability */}
-        <div className="bg-[#0A1128] rounded-[40px] p-12 md:p-16 text-white text-center">
+        <div className="bg-surface rounded-sm p-12 md:p-16 text-white text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-semibold mb-6 ">
               Accountability & <span className="text-[var(--assembly-blue)]">Transparency</span>
             </h2>
             <p className="text-lg text-slate-400 mb-10 leading-relaxed">

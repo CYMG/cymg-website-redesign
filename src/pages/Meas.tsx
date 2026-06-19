@@ -52,7 +52,7 @@ export default function Meas() {
             </p>
           </div>
           <div
-            className="rounded-[20px] p-8"
+            className="rounded-sm p-8"
             style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
           >
             <h3 className="font-display text-lg font-medium mb-4" style={{ color: 'var(--ink)' }}>
@@ -71,7 +71,7 @@ export default function Meas() {
                 'Minamata Convention on Mercury',
               ].map((mea) => (
                 <li key={mea} className="flex items-center gap-2 text-sm" style={{ color: 'var(--ink)' }}>
-                  <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: 'var(--canopy-green)' }} />
+                  <div className="w-1.5 h-1.5 rounded-sm flex-shrink-0" style={{ backgroundColor: 'var(--canopy-green)' }} />
                   {mea}
                 </li>
               ))}
@@ -81,7 +81,7 @@ export default function Meas() {
 
         {/* Youth Engagement */}
         <div
-          className="rounded-[20px] p-8 md:p-10 mb-16"
+          className="rounded-sm p-8 md:p-10 mb-16"
           style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
         >
           <h2 className="text-h2 font-display mb-4" style={{ color: 'var(--ink)' }}>
@@ -122,7 +122,7 @@ export default function Meas() {
             {engagements.map((e) => (
               <div
                 key={e.title}
-                className="rounded-[20px] p-6"
+                className="rounded-sm p-6"
                 style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
               >
                 <e.icon size={24} className="mb-4" style={{ color: 'var(--canopy-green)' }} />
@@ -147,7 +147,7 @@ export default function Meas() {
                 href={r.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-[20px] p-6 flex items-start gap-4 transition-shadow hover:shadow-md"
+                className="rounded-sm p-6 flex items-start gap-4 transition-shadow hover:shadow-md"
                 style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
               >
                 <ExternalLink size={20} className="flex-shrink-0 mt-0.5" style={{ color: 'var(--assembly-blue)' }} />

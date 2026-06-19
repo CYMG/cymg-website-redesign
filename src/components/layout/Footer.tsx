@@ -12,28 +12,20 @@ const footerColumns = [
     ],
   },
   {
-    title: 'Thematic Areas',
-    links: [
-      { label: 'Working Groups', href: '/working-groups' },
-      { label: 'Chemicals & Waste', href: '/working-groups' },
-      { label: 'Nature & Ecosystems', href: '/working-groups' },
-      { label: 'Ocean Governance', href: '/working-groups' },
-    ],
-  },
-  {
     title: 'Engagement',
     links: [
+      { label: 'Working Groups', href: '/working-groups' },
       { label: 'UNEA Hub', href: '/unea-and-core-processes' },
-      { label: 'YEA 2025', href: '/unea-and-core-processes' },
-      { label: 'Global Youth Deployment', href: '/join' },
+      { label: 'Regions', href: '/regions' },
+      { label: 'Join', href: '/join' },
     ],
   },
   {
     title: 'Resources',
     links: [
-      { label: 'Latest Stories', href: '/blog' },
-      { label: 'Documents Hub', href: '/documents' },
-      { label: 'Events Calendar', href: '/calendar' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Documents', href: '/documents' },
+      { label: 'Calendar', href: '/calendar' },
       { label: 'Policies', href: '/about/policies-and-safeguarding' },
     ],
   },
@@ -49,28 +41,28 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0A1128] text-white pt-24 pb-12">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-20">
+    <footer className="w-full bg-surface border-t border-line">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-2">
-            <Link to="/" className="inline-block mb-6">
+            <Link to="/" className="inline-block mb-5">
               <img
                 src="/cymg-logo-refined.svg"
                 alt="CYMG — Children and Youth Major Group"
-                className="h-12 w-auto"
+                className="h-10 w-auto"
               />
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed mb-8 max-w-sm">
-              The formal channel for children and youth participation in the UN Environment Programme, empowering the next generation to lead global environmental action.
+            <p className="text-sm text-[var(--ink-60)] leading-relaxed mb-6 max-w-sm">
+              The official UN-recognized constituency for children and youth engaging with the UN Environment Programme.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white transition-all hover:bg-[var(--assembly-blue)] hover:scale-110"
+                  className="p-2 text-[var(--ink-60)] hover:text-[var(--assembly-blue)] transition-colors"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -81,15 +73,15 @@ export default function Footer() {
 
           {footerColumns.map((col) => (
             <div key={col.title}>
-              <h4 className="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-slate-500">
+              <h4 className="text-xs font-medium uppercase tracking-wide mb-4 text-[var(--ink-60)]">
                 {col.title}
               </h4>
-              <ul className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       to={link.href}
-                      className="text-sm text-slate-300 transition-colors hover:text-white"
+                      className="text-sm text-ink hover:text-[var(--assembly-blue)] transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -100,13 +92,13 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-xs text-slate-500 font-medium">
+        <div className="pt-8 border-t border-line flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-xs text-[var(--ink-60)]">
             &copy; {new Date().getFullYear()} Children and Youth Major Group. All rights reserved.
           </div>
-          <div className="flex gap-8 text-xs text-slate-500 font-medium">
-            <Link to="/about/policies-and-safeguarding" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link>
+          <div className="flex gap-6 text-xs text-[var(--ink-60)]">
+            <Link to="/about/policies-and-safeguarding" className="hover:text-ink transition-colors">Privacy Policy</Link>
+            <Link to="/contact" className="hover:text-ink transition-colors">Contact Us</Link>
           </div>
         </div>
       </div>

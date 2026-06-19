@@ -57,7 +57,7 @@ export default function WorkingGroupDetail() {
               {wg.highlights.map((h, i) => (
                 <div
                   key={i}
-                  className="rounded-[20px] p-6"
+                  className="rounded-sm p-6"
                   style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
                 >
                   <h3 className="font-display text-lg font-medium mb-2" style={{ color: 'var(--ink)' }}>
@@ -80,11 +80,11 @@ export default function WorkingGroupDetail() {
               {wg.engagements.map((e, i) => (
                 <div
                   key={i}
-                  className="rounded-[20px] p-6 flex items-start gap-4"
+                  className="rounded-sm p-6 flex items-start gap-4"
                   style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
                 >
                   <div
-                    className="w-3 h-3 rounded-full mt-1.5 flex-shrink-0"
+                    className="w-3 h-3 rounded-sm mt-1.5 flex-shrink-0"
                     style={{ backgroundColor: cluster.color }}
                   />
                   <div>
@@ -108,7 +108,7 @@ export default function WorkingGroupDetail() {
             {wg.focalPoints.map((fp, i) => (
               <div
                 key={i}
-                className="rounded-[20px] p-6"
+                className="rounded-sm p-6"
                 style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
               >
                 <h3 className="font-display font-medium mb-1" style={{ color: 'var(--ink)' }}>

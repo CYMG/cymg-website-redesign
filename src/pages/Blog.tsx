@@ -46,7 +46,7 @@ export default function Blog() {
           </span>
           <Link
             to={`/blog/${featuredPost.slug}`}
-            className="block rounded-[20px] overflow-hidden group"
+            className="block rounded-sm overflow-hidden group"
             style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
           >
             <div className="grid grid-cols-1 md:grid-cols-2">
@@ -91,7 +91,7 @@ export default function Blog() {
               <button
                 key={f.value}
                 onClick={() => setTagFilter(f.value)}
-                className="text-mono-sm px-4 py-2 rounded-full transition-all"
+                className="text-mono-sm px-4 py-2 rounded-sm transition-all"
                 style={{
                   backgroundColor: tagFilter === f.value ? 'var(--assembly-blue)' : 'var(--surface)',
                   color: tagFilter === f.value ? 'var(--paper)' : 'var(--ink)',
@@ -107,7 +107,7 @@ export default function Blog() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search posts..."
-            className="flex-1 max-w-sm px-4 py-2 rounded-full text-sm outline-none"
+            className="flex-1 max-w-sm px-4 py-2 rounded-sm text-sm outline-none"
             style={{
               backgroundColor: 'var(--surface)',
               border: '1px solid var(--line)',

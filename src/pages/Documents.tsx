@@ -47,7 +47,7 @@ export default function Documents() {
               <button
                 key={f.value}
                 onClick={() => setTypeFilter(f.value)}
-                className="text-mono-sm px-4 py-2 rounded-full transition-all"
+                className="text-mono-sm px-4 py-2 rounded-sm transition-all"
                 style={{
                   backgroundColor: typeFilter === f.value ? 'var(--assembly-blue)' : 'var(--surface)',
                   color: typeFilter === f.value ? 'var(--paper)' : 'var(--ink)',
@@ -61,7 +61,7 @@ export default function Documents() {
           <select
             value={yearFilter}
             onChange={(e) => setYearFilter(e.target.value)}
-            className="px-4 py-2 rounded-full text-mono-sm outline-none"
+            className="px-4 py-2 rounded-sm text-mono-sm outline-none"
             style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)', color: 'var(--ink)' }}
           >
             {documentYearFilters.map((f) => (
@@ -73,7 +73,7 @@ export default function Documents() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search documents..."
-            className="flex-1 max-w-sm px-4 py-2 rounded-full text-sm outline-none"
+            className="flex-1 max-w-sm px-4 py-2 rounded-sm text-sm outline-none"
             style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)', color: 'var(--ink)' }}
           />
         </div>
@@ -83,7 +83,7 @@ export default function Documents() {
           {filtered.map((doc) => (
             <div
               key={doc.id}
-              className="rounded-[20px] p-6 flex flex-col"
+              className="rounded-sm p-6 flex flex-col"
               style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
             >
               <div className="flex items-start gap-3 mb-4">
@@ -110,14 +110,14 @@ export default function Documents() {
                 </div>
                 <div className="flex gap-2">
                   <button
-                    className="p-2 rounded-full transition-opacity hover:opacity-70"
+                    className="p-2 rounded-sm transition-opacity hover:opacity-70"
                     style={{ color: 'var(--assembly-blue)' }}
                     aria-label="View"
                   >
                     <Eye size={16} />
                   </button>
                   <button
-                    className="p-2 rounded-full transition-opacity hover:opacity-70"
+                    className="p-2 rounded-sm transition-opacity hover:opacity-70"
                     style={{ color: 'var(--assembly-blue)' }}
                     aria-label="Download"
                   >

@@ -15,17 +15,17 @@ export default function Regions() {
   return (
     <div className="bg-paper dark:bg-ink min-h-screen">
       {/* Hero */}
-      <div className="pt-32 pb-20 px-6 bg-[#0A1128] text-white">
+      <div className="pt-16 pb-14 px-4 sm:px-6 lg:px-8 bg-surface border-b border-line text-ink">
         <div className="max-w-7xl mx-auto">
           <Breadcrumbs items={[{ label: 'Regions' }]} />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-extrabold mt-8 tracking-tight"
+            className="text-4xl md:text-5xl font-semibold mt-6 "
           >
             Global <span className="text-[var(--assembly-blue)]">Regions</span>
           </motion.h1>
-          <p className="text-xl text-slate-400 mt-6 max-w-3xl leading-relaxed">
+          <p className="text-lg text-[var(--ink-60)] mt-5 max-w-3xl leading-relaxed">
             Organized across 6 UNEP regions plus special seats, ensuring local perspectives reach the highest levels of global environmental governance.
           </p>
         </div>
@@ -40,9 +40,9 @@ export default function Regions() {
                 <button
                   key={region.id}
                   onClick={() => setSelectedRegion(region.id === selectedRegion ? null : region.id)}
-                  className={`text-left rounded-2xl px-6 py-5 transition-all duration-300 border ${
+                  className={`text-left rounded-sm px-6 py-5 transition-all duration-300 border ${
                     selectedRegion === region.id
-                      ? 'bg-[var(--assembly-blue)] border-[var(--assembly-blue)] text-white shadow-lg scale-[1.02]'
+                      ? 'bg-[var(--assembly-blue)] border-[var(--assembly-blue)] text-white scale-[1.02]'
                       : 'bg-white dark:bg-slate-900 border-line dark:border-white/5 text-ink dark:text-paper hover:border-[var(--assembly-blue)] hover:shadow-md'
                   }`}
                 >
@@ -51,7 +51,7 @@ export default function Regions() {
                       {region.name}
                     </span>
                     {region.type === 'special' ? (
-                      <span className={`text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full ${
+                      <span className={`text-[10px] font-semibold uppercase tracking-widest px-2 py-0.5 rounded-sm ${
                         selectedRegion === region.id ? 'bg-white/20 text-white' : 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400'
                       }`}>
                         Special
@@ -74,11 +74,11 @@ export default function Regions() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  className="bg-white dark:bg-slate-900 rounded-[32px] p-10 shadow-2xl border border-line dark:border-white/5"
+                  className="bg-white dark:bg-slate-900 rounded-sm p-10 border border-line dark:border-white/5"
                 >
                   <div className="flex items-start justify-between mb-10 pb-8 border-b border-line dark:border-white/5">
                     <div>
-                      <h2 className="text-4xl font-extrabold text-ink dark:text-paper mb-2 tracking-tight">
+                      <h2 className="text-4xl font-semibold text-ink dark:text-paper mb-2 ">
                         {activeRegion.name}
                       </h2>
                       {activeRegion.type === 'special' && (
@@ -89,7 +89,7 @@ export default function Regions() {
                     </div>
                     <button
                       onClick={() => setSelectedRegion(null)}
-                      className="p-3 rounded-full hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+                      className="p-3 rounded-sm hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
                     >
                       <X size={24} className="text-slate-400" />
                     </button>
@@ -98,13 +98,13 @@ export default function Regions() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     {/* Facilitator */}
                     <div className="space-y-6">
-                      <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">
+                      <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
                         Regional Facilitator
                       </h3>
                       {facilitator && !facilitator.isVacant ? (
-                        <div className="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-line dark:border-white/5">
+                        <div className="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-sm border border-line dark:border-white/5">
                           <div className="flex items-center gap-4 mb-4">
-                            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-indigo-800 flex items-center justify-center text-white text-2xl font-black">
+                            <div className="w-16 h-16 rounded-sm bg-[var(--assembly-blue)] flex items-center justify-center text-white text-2xl font-semibold">
                               {facilitator.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}
                             </div>
                             <div>
@@ -124,9 +124,9 @@ export default function Regions() {
                           </a>
                         </div>
                       ) : (
-                        <div className="p-8 rounded-2xl border-2 border-dashed border-line dark:border-white/10 text-center">
+                        <div className="p-8 rounded-sm border-2 border-dashed border-line dark:border-white/10 text-center">
                           <p className="text-sm text-slate-500 italic mb-4">Facilitator position currently vacant.</p>
-                          <a href="/join" className="text-sm font-black text-[var(--assembly-blue)] hover:underline">Apply to Volunteer</a>
+                          <a href="/join" className="text-sm font-semibold text-[var(--assembly-blue)] hover:underline">Apply to Volunteer</a>
                         </div>
                       )}
                     </div>
@@ -134,7 +134,7 @@ export default function Regions() {
                     {/* Content */}
                     <div className="space-y-8">
                       <div>
-                        <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-4">
+                        <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">
                           Key Initiatives
                         </h3>
                         <ul className="space-y-3">
@@ -148,7 +148,7 @@ export default function Regions() {
                       </div>
 
                       <div>
-                        <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-4">
+                        <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">
                           Regional Events
                         </h3>
                         <ul className="space-y-3">
@@ -156,7 +156,7 @@ export default function Regions() {
                             <li key={evt.title} className="flex items-center gap-3 text-sm font-medium text-ink dark:text-paper">
                               <Calendar size={16} className="text-[var(--assembly-blue)]" />
                               <span>{evt.title}</span>
-                              <span className="text-[10px] font-bold text-slate-400 bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded-full ml-auto">{evt.date}</span>
+                              <span className="text-[10px] font-bold text-slate-400 bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded-sm ml-auto">{evt.date}</span>
                             </li>
                           ))}
                         </ul>
@@ -165,8 +165,8 @@ export default function Regions() {
                   </div>
                 </motion.div>
               ) : (
-                <div className="h-full min-h-[400px] flex flex-col items-center justify-center text-center p-12 rounded-[32px] border-2 border-dashed border-line dark:border-white/10">
-                  <div className="w-20 h-20 bg-slate-100 dark:bg-white/5 rounded-full flex items-center justify-center mb-6">
+                <div className="h-full min-h-[400px] flex flex-col items-center justify-center text-center p-12 rounded-sm border-2 border-dashed border-line dark:border-white/10">
+                  <div className="w-20 h-20 bg-slate-100 dark:bg-white/5 rounded-sm flex items-center justify-center mb-6">
                     <MapPin size={40} className="text-slate-300" />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-400 mb-2">Explore Our Global Reach</h3>
